@@ -1,0 +1,257 @@
+.main_writeform {
+    width: 700px;
+    max-width: 900px;
+    min-height : 500px;
+    margin: 0 auto;
+    height : 500px;
+    font-weight: bold;
+}
+._ {
+    width : 700px;
+    margin-top : 5px;
+    padding-top : 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(233,233,233);
+}
+.write_main {
+    width : 700px;
+    height : 500px;
+    margin : 0 auto;
+    text-align: center;
+}
+.name_start {
+    box-sizing: border-box;
+    border-radius: 10px !important;
+    padding-top : 30px;
+}
+.name_start input {
+    background-color: whitesmoke;
+    border : none;
+    width : 33%;
+    height : 40px;
+    border-radius: 10px !important;
+    margin-left : 20px;
+    margin-top : 20px;
+} 
+.name_start input:focus {
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.name_start label {
+    padding: 0 5px;
+    padding-top: 30px;
+    font-weight: bold;
+}
+.id {
+    box-sizing: border-box;
+    padding : 6px 14px;
+    height : 30px;
+    border-radius: 10px !important;
+    margin : 25px;
+    margin-left : 20px;
+}
+.id input {
+    background-color: whitesmoke;
+    padding : 6px 14px;
+    border : none;
+    width : 33%;
+    height : 30px;
+    border-radius: 10px !important;
+    margin-left : 20px;
+}
+.id input:focus {
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.id label {
+    padding-top: 8px;
+    font-weight: bold;
+}
+.pwd {
+    box-sizing: border-box;
+    padding : 6px 14px;
+    height : 30px;
+    border-radius: 10px !important;
+    margin : 10px;
+    padding-top : 20px;
+    margin-left : -5px;
+}
+.pwd input {
+    background-color: whitesmoke;
+    padding : 6px 14px;
+    border : none;
+    width : 31%;
+    height : 30px;
+    margin-left : 20px;
+    border-radius: 10px !important;
+}
+.pwd input:focus {
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.pwd_re {
+    box-sizing: border-box;
+    padding : 6px 14px;
+    height : 30px;
+    border-radius: 10px !important;
+    margin : 10px;
+    padding-top : 50px;
+    margin-left : -37px;
+}
+.pwd_re input {
+    background-color: whitesmoke;
+    padding : 6px 14px;
+    border : none;
+    width : 30%;
+    height : 30px;
+    margin-left : 20px;
+    border-radius: 10px !important;
+}
+.pwd_re input:focus {
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.phone {
+    box-sizing: border-box;
+    border-radius: 10px !important;
+    padding-top : 55px;
+    margin-left : -75px;
+}
+.phone input {
+    background-color: whitesmoke;
+    border : none;
+    width : 31%;
+    height : 40px;
+    border-radius: 10px !important;
+    margin-left : 20px;
+}
+.phone input:focus {
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.label_phone {
+    margin-left : 30px;
+}
+.row_div {
+    padding-top : 30px;
+}
+.buttons {
+    width : 230px;
+    height : 40px;
+    margin : 0 auto;
+    text-align: center;
+}
+.buttons button {
+    width : 80px;
+    height : 35px;
+    margin : 10px;
+    border : 0;
+    border-radius: 10px !important;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top : 50px;
+    transition: 0.3s;
+}
+.buttons button:hover {
+    background-color : cadetblue;
+}
+.check {
+    display:  inline-block;
+    color: red;
+    font-size: 14px;
+}
+@media (max-width: 1199px) {
+    .selected_day {
+        display: inline-block;
+    }
+    .main_page {
+        width : 100%;
+    }
+    .information {
+        width : 100%;
+        flex-wrap: wrap;
+    }
+    .main_reservation {
+        width : 100%;
+        padding-top : 20px;
+    }
+    .select_month_day {
+        width : 20%;
+    }
+    .row_div {
+        width: 100%;
+    }
+    .row_div input{
+        width: 40%
+    }
+    .row_day {
+        width: 40%;
+    }
+    ._ {
+        width : 100%;
+    }
+    .hr {
+        display: none;
+    }
+}
+@media (max-width: 754px) {
+    .name_start {
+        flex-direction: column;
+    }
+    .name_start input{
+        height: 40px;     
+        width: 50%;  
+    }
+    .row_div input{
+        width: 70%
+    }
+    .row_day {
+        margin-top: 30px;
+        float: none;
+        width: 100%;
+    }
+}
+/*------비밀번호 확인버튼------*/
+.pwd_check {
+    box-sizing: border-box;
+    padding : 6px 14px;
+    height : 30px;
+    border-radius: 10px !important;
+    margin : 10px;
+}
+.pwd_check span {
+    display: inline-block;
+    margin-left: 20%;
+    margin-top: 10%;
+} 
+.pwd_check input {    
+    display: inline-block;
+    background-color: whitesmoke;
+    padding : 6px 14px;
+    border : none;
+    cursor: pointer;
+    height : 30px;
+    width : 33%;
+    border-radius: 10px !important;
+    margin-left: 20px;
+}
+.pwd_check input:focus {
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.pwd_check button {
+    display: inline-block;
+    border : none;
+    width : 70px;
+    height : 30px;
+    background-color: whitesmoke;
+    border-radius: 10px !important;
+    cursor: pointer;
+    margin : 10px 0px 0 20px;
+    transition: 0.4s;
+    font-weight: bold;
+}
+.pwd_check button:hover {
+    background-color : cadetblue;
+    color: whitesmoke;
+}

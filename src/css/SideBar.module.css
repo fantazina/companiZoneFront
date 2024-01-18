@@ -1,0 +1,24 @@
+.sidebar_button {
+    padding-top: 25px;
+    width : 185px;
+    height : 625px;
+    margin : left;
+    text-align: center;
+    float : left;
+    border-bottom : 1px solid gray;
+}
+.sidebar_button button {
+    width : 150px;
+    height : 50px;
+    margin-top : 20px;
+    border-radius: 10px !important;
+    cursor: pointer;
+    border : 0;
+    transition: 0.4s;
+    font-weight: bold;
+
+}
+.sidebar_button button:hover {
+    background-color : cadetblue;
+    color : whitesmoke;
+}

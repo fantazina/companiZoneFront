@@ -1,0 +1,164 @@
+/* 스크롤 */
+.main_page::-webkit-scrollbar {
+    width:8px;
+}
+.main_page::-webkit-scrollbar-track {
+    background-color: transparate;
+}
+.main_page::-webkit-scrollbar-thumb {
+    background-color: cadetblue;
+    border-radius: 8px;
+}
+/* *************************************** */
+.main_container {
+    width : 1090px;
+    height : 858px;
+    margin : 0 auto;
+
+}
+.header_main {
+    border-bottom : 1px solid gray;
+    width : 1087px;
+    height : 100px;
+
+}
+.header_span {
+    float : right;
+    margin-top : 70px;
+    margin-right : 50px;
+    cursor: pointer;    
+}
+.header_span2 {
+    float : right;
+    margin-top : 50px;
+    margin-right : 30px;    
+}
+.header_span2 button {
+    display: inline-block;
+    border : none;
+    width : 70px;
+    height : 30px;
+    background-color: whitesmoke;
+    border-radius: 10px !important;
+    cursor: pointer;
+    margin : 10px 0px 0 20px;
+    transition: 0.4s;
+    font-weight: bold;
+}
+.header_span2 button:hover {
+    background-color : cadetblue;
+    color: whitesmoke;
+}
+.main_page {
+    float : left;
+    border-bottom : 1px solid gray;
+    width : 900px;
+    height : 600px;
+    overflow: auto;
+    overflow-x: hidden;
+    margin-top: 50px;
+}
+/*--------index--------*/
+.main_form {
+    width : 850px;
+    height : 98%;
+    margin : 0 auto;
+}
+.img_div {
+    width : 900px;
+    height : 100%;
+    margin : 0 auto;
+}
+.text {
+    width : 370px;
+    height : 200px;
+    float : right;
+}
+/*--------index--------*/
+.login_page {
+/*  border : 1px solid red; */
+    width : 900px;
+    height : 500px;
+}
+.login_div {
+    text-align: center;
+    margin-top : 150px;
+}
+.id {
+    box-sizing: border-box;
+    padding : 6px 14px;
+    height : 30px;
+    border-radius: 10px !important;
+    margin : 25px;
+    margin-left : 20px;
+}
+.id input {
+    background-color: whitesmoke;
+    padding : 6px 14px;
+    border : none;
+    width : 26%;
+    height : 30px;
+    border-radius: 10px !important;
+    margin-left : 20px;
+}
+.id input:focus {
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.id label {
+    padding-top: 8px;
+    font-weight: bold;
+}
+.pwd {
+    box-sizing: border-box;
+    padding : 6px 14px;
+    height : 30px;
+    border-radius: 10px !important;
+    margin : 10px;
+    padding-top : 20px;
+    margin-left : -10px;
+}
+.pwd input {
+    background-color: whitesmoke;
+    padding : 6px 14px;
+    border : none;
+    width : 25%;
+    height : 30px;
+    margin-left : 20px;
+    border-radius: 10px !important;
+}
+.pwd input:focus {
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.pwd label {
+    padding-top: 8px;
+    font-weight: bold;
+}
+.buttons {
+    width : 230px;
+    height : 40px;
+    margin : 0 auto;
+    text-align: center;
+    margin-top : 50px;
+}
+.buttons button {
+    width : 80px;
+    height : 35px;
+    margin : 10px;
+    border : 0;
+    border-radius: 10px !important;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top : 45px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.buttons button:hover {
+    background-color : cadetblue;
+}
+.check {
+    display:  inline-block;
+    color: red;
+    font-size: 14px;
+}

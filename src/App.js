@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
-function App() {
+import Main from './user/Main';
+import SideBar from './user/SideBar';
+import Header from './user/Header';
+import styles from './css/Main.module.css';
+
+const App = () => {
+  const [page,setPage] = useState(0)
+
+  const onPage = (num) => {
+    setPage(num)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={ styles.main_container }>
+      <Header onPage={onPage}/>
+      <SideBar page={page} onPage={onPage}/>
+      <Main page={page} onPage={onPage}/>
     </div>
   );
-}
+};
 
 export default App;

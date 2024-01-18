@@ -1,0 +1,61 @@
+.container {
+    width : 900px;
+    height : 900px;
+    margin : 0 auto;
+}
+.content {
+
+    border : 1px solid black;
+    width : 900px;
+    height : 720px;
+    padding : 27px;
+}
+.title_sel {
+    display: flex;
+    align-items: center;
+}
+.title_div {
+    width : 900px;
+    height : 50px;
+    display : flex;
+    margin-left : 30px;
+}
+.title_div input {
+    width : 520px;
+    height : 43px;
+    float : right;  
+    margin-left : 30px; 
+}
+.select_div {
+    display: flex;
+}
+.select_div select {
+    width : 130px;
+    height : 45px;
+    display : flex;
+}
+.button button {
+    border : none;
+    width : 100px;
+    height : 45px;
+    background-color: whitesmoke;
+    border-radius: 10px !important;
+    cursor: pointer;
+    float : right;
+    margin-left : 50px;
+} 
+.text_img {
+    width : 890px;
+    height : 550px;
+    padding-top : 20px;
+}
+.textarea {
+    width : 894px;
+    height : 500px;
+}
+.img_div {
+    border : 1px solid red;
+    width : 897px;
+    height : 135px;
+    padding-top : 20px;
+}
