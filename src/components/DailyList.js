@@ -1,21 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 const DailyList = ({ onPage, onSeq, D_styles, pg, onPg, mainOnPage }) => {
     
     const userDTO = JSON.parse(window.sessionStorage.getItem('userDTO'))
     
-    const {page} = useParams()
     const[list, setList] = useState([])
     const[pageList, setPageList] = useState([])
 
     const[keyword, setKeyword] = useState('')
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/write/getList/1`, { params: { keyword: keyword , pg : pg } })
-              .then(res => setList(res.data))
-
         axios.get(`http://localhost:8080/write/getTotal/1`)
              .then(res => {
                 let pl = []
@@ -50,7 +45,6 @@ const DailyList = ({ onPage, onSeq, D_styles, pg, onPg, mainOnPage }) => {
     useEffect(() => {
         axios.get(`http://localhost:8080/write/getList/1`, { params: { keyword: keyword, pg : pg } })
              .then(res => setList(res.data))
-             
     }, [keyword, pg])
 
 
