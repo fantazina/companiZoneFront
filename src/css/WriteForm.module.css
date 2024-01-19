@@ -21,21 +21,20 @@
 }
 .name_start {
     box-sizing: border-box;
-    border-radius: 10px !important;
     padding-top : 30px;
 }
 .name_start input {
-    background-color: whitesmoke;
+    background-color : whitesmoke;
     border : none;
     width : 32%;
     height : 40px;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     margin-left : 20px;
     margin-top : 20px;
 } 
 .name_start input:focus {
-    outline: none;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    outline: 2px solid cadetblue;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 .name_start label {
     padding: 0 5px;
@@ -46,22 +45,22 @@
     box-sizing: border-box;
     padding : 6px 14px;
     height : 30px;
-    border-radius: 10px !important;
     margin : 25px;
     margin-left : 20px;
 }
 .id input {
-    background-color: whitesmoke;
+    background-color : whitesmoke;
+    border : none;
     padding : 6px 14px;
     border : none;
     width : 33%;
     height : 30px;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     margin-left : 20px;
 }
 .id input:focus {
-    outline: none;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    outline: 2px solid cadetblue;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 .id label {
     padding-top: 8px;
@@ -71,63 +70,60 @@
     box-sizing: border-box;
     padding : 6px 14px;
     height : 30px;
-    border-radius: 10px !important;
     margin : 10px;
     padding-top : 20px;
     margin-left : -7px;
 }
 .pwd input {
-    background-color: whitesmoke;
+    background-color : whitesmoke;
     padding : 6px 14px;
     border : none;
     width : 31%;
     height : 30px;
     margin-left : 20px;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
 }
 .pwd input:focus {
-    outline: none;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    outline: 2px solid cadetblue;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 .pwd_re {
     box-sizing: border-box;
     padding : 6px 14px;
     height : 30px;
-    border-radius: 10px !important;
     margin : 10px;
     padding-top : 50px;
     margin-left : -40px;
 }
 .pwd_re input {
-    background-color: whitesmoke;
+    background-color : whitesmoke;
     padding : 6px 14px;
     border : none;
     width : 30%;
     height : 30px;
     margin-left : 20px;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
 }
 .pwd_re input:focus {
-    outline: none;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    outline: 2px solid cadetblue;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 .phone {
     box-sizing: border-box;
-    border-radius: 10px !important;
     padding-top : 55px;
     margin-left : -80px;
 }
 .phone input {
-    background-color: whitesmoke;
+    background-color : whitesmoke;
     border : none;
     width : 29%;
     height : 40px;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     margin-left : 20px;
 }
 .phone input:focus {
-    outline: none;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    outline: 2px solid cadetblue;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 .label_phone {
     margin-left : 30px;
@@ -146,7 +142,7 @@
     height : 35px;
     margin : 10px;
     border : 0;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     cursor: pointer;
     font-weight: bold;
     margin-top : 50px;
@@ -154,6 +150,7 @@
 }
 .buttons button:hover {
     background-color : cadetblue;
+    color : white;
 }
 .check {
     display:  inline-block;

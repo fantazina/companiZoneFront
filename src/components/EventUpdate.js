@@ -10,7 +10,6 @@ const EventUpdate = ({E_styles, onPage, seq}) => {
 
     const[imgList, setImgList] = useState([])
     const[files, setFiles] = useState('')
-    const[file, setFile] = useState('')
 
     useEffect(() => {
         axios.get(`http://localhost:8080/write/getUp/${seq}`)
@@ -19,7 +18,7 @@ const EventUpdate = ({E_styles, onPage, seq}) => {
                 setImgList(res.data.images !== '' ? res.data.images.split(',') : [])
 
             })
-    }, [])
+    }, [seq])
 
     const onInput = (e) => {
         const {name, value} = e.target
@@ -36,13 +35,9 @@ const EventUpdate = ({E_styles, onPage, seq}) => {
 
     const onImgInput = (e) => {
         const imgFiles = Array.from(e.target.files)
-        var imgArray = []
-
-        imgFiles.map(item => {
-            const objectURL = URL.createObjectURL(item)
-            imgArray.push(objectURL)
-        })
+        const imgArray = imgFiles.map(item => URL.createObjectURL(item));
         setImgList(imgArray)
+        setFiles(e.target.files)
         setFiles(e.target.files)
     }
 
@@ -157,7 +152,7 @@ const EventUpdate = ({E_styles, onPage, seq}) => {
                                     // 선택한 이미지를 미리보기
                                     imgList.map((item, index) => <img key={ index } 
                                                                         src={ item } 
-                                                                        style={{ width: '100px', height: '100px' }} />)
+                                                                        style={{ width: '100px', height: '100px' }} alt='사진' />)
                                 }
                             </span>
 

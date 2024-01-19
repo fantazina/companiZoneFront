@@ -1,5 +1,4 @@
 .upload_main {
-    /* border : 1px solid black; */
     width : 900px;
     height : 700px;
     margin : 0 auto;
@@ -10,7 +9,8 @@
     height : 500px;
  }
  .content {
-    border : 1px solid black;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    /* border : 1px solid gray; */
     width : 800px;
     height : 700px;
     padding : 20px;
@@ -19,6 +19,7 @@
 .title_sel {
     display: flex;
     align-items: center;
+    text-align: center;
 }
 .title_div {
     width : 900px;
@@ -27,21 +28,35 @@
     margin-left : 30px;
 }
 .title_div input {
+    border-radius: 5px !important;
     width : 430px;
     height : 30px;
     float : right;  
-    margin-left : 30px; 
+    margin-left : 25px; 
+    border : 1px solid whitesmoke;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);  
+    outline: none;
+}
+.title_div input:focus {
+    outline: 2px solid cadetblue;
 }
 .title_div p {
-    margin-top : 10px;
+    margin-top : 6px;
 }
 .select_div {
     display: flex;
 }
 .select_div select {
+    border-radius: 5px !important;
     width : 110px;
     height : 35px;
     display : flex;
+    border : 1px solid whitesmoke;
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);  
+}
+.select_div select:focus {
+    outline: 2px solid cadetblue;
 }
 .button button {
     display: inline-block;
@@ -49,7 +64,7 @@
     width : 70px;
     height : 30px;
     background-color: whitesmoke;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     cursor: pointer;
     margin : 2.8px 0px 0 12px;
     transition: 0.4s;
@@ -73,17 +88,33 @@
     width : 796px;
     height : 500px;
     resize: none;
+    outline: none;
+    border : 1px solid whitesmoke;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.textarea:focus {
+    outline: 2px solid cadetblue;
 }
 .img_div {
-    border : 1px solid gray;
     width : 98.5%;
     height : 110px;
     padding-top : 10px;
     padding-left : 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.img_div:focus {
+    outline: 2px solid cadetblue;
+}
+.img_camera {
+    float : right;
+    width : 100px;
+    height : 100px;
+    border-radius : 20px; 
+    cursor : pointer; 
 }
 /*--------------list css--------------*/
-.quesList {
-    height : 500px;
+.dailyList {
+    height : 481px;
 }
 .seq {
     display: inline-block;
@@ -130,13 +161,13 @@
     border : none;
     margin-left: 20px;
     background-color: whitesmoke;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     cursor: pointer;
     padding-left : 18px; 
 }
 .search input:focus {
-    outline: none;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    outline: 2px solid cadetblue;
 }
 .search button {
     display: inline-block;
@@ -144,7 +175,7 @@
     width : 85px;
     height : 35px;
     background-color: whitesmoke;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     cursor: pointer;
     float : right;
     margin : 0 30px 20px 100px;
@@ -221,7 +252,7 @@
     width : 70px;
     height : 30px;
     background-color: whitesmoke;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     cursor: pointer;
     margin : 10px 0px 0 10px;
     transition: 0.4s;
@@ -238,7 +269,7 @@
     width : 70px;
     height : 30px;
     background-color: whitesmoke;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     cursor: pointer;
     margin : 10px 0px 0 10px;
     transition: 0.4s;
@@ -251,7 +282,7 @@
 /*--------------page-------------*/
 .page_num {
     text-align: center;
-}    
+}  
 .page_box {
     padding : 10px;
     padding-top : 5px;
@@ -286,7 +317,7 @@
     /* text-align: center; */
     height : 55px;
     width : 700px;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     /* border-top : 1px solid darkgray; */
     border : 1px solid darkgray;
 }
@@ -296,7 +327,7 @@
     width : 70px;
     height : 30px;
     background-color: whitesmoke;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     cursor: pointer;
     margin : 10px 0px 0 20px;
     transition: 0.4s;
@@ -312,7 +343,7 @@
     width : 70px;
     height : 30px;
     background-color: whitesmoke;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     cursor: pointer;
     margin : 0 30px 0 0;
     float : right;

@@ -14,7 +14,6 @@
     width : 1090px;
     height : 858px;
     margin : 0 auto;
-
 }
 .header_main {
     border-bottom : 1px solid gray;
@@ -39,7 +38,7 @@
     width : 70px;
     height : 30px;
     background-color: whitesmoke;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     cursor: pointer;
     margin : 10px 0px 0 20px;
     transition: 0.4s;
@@ -76,7 +75,6 @@
 }
 /*--------index--------*/
 .login_page {
-/*  border : 1px solid red; */
     width : 900px;
     height : 500px;
 }
@@ -88,7 +86,6 @@
     box-sizing: border-box;
     padding : 6px 14px;
     height : 30px;
-    border-radius: 10px !important;
     margin : 25px;
     margin-left : 20px;
 }
@@ -98,12 +95,12 @@
     border : none;
     width : 26%;
     height : 30px;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     margin-left : 20px;
 }
 .id input:focus {
-    outline: none;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    outline: 2px solid cadetblue;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 .id label {
     padding-top: 8px;
@@ -113,23 +110,22 @@
     box-sizing: border-box;
     padding : 6px 14px;
     height : 30px;
-    border-radius: 10px !important;
     margin : 10px;
     padding-top : 20px;
     margin-left : -10px;
 }
 .pwd input {
-    background-color: whitesmoke;
     padding : 6px 14px;
     border : none;
     width : 25%;
     height : 30px;
     margin-left : 20px;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
+    background-color : whitesmoke;
 }
 .pwd input:focus {
-    outline: none;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    outline: 2px solid cadetblue;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 .pwd label {
     padding-top: 8px;
@@ -147,7 +143,7 @@
     height : 35px;
     margin : 10px;
     border : 0;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     cursor: pointer;
     font-weight: bold;
     margin-top : 45px;
@@ -156,6 +152,7 @@
 }
 .buttons button:hover {
     background-color : cadetblue;
+    color : white;
 }
 .check {
     display:  inline-block;

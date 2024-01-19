@@ -29,7 +29,7 @@ const QuestionView = ({onPage, Q_styles ,seq, mainPage}) => {
         console.log(mpHeight)
 
         if (mpScroll + 1 >= mpHeight) {
-            if( !loading && commentList.length < 0 ) {
+            if( !loading && commentList.length > 0 ) {
                 console.log('불러오겠다!')
                 //로딩이 트루인 시점
                 setLoading(true)

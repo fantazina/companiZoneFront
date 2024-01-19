@@ -29,7 +29,7 @@ const DailyView = ({onPage, D_styles ,seq, mainPage}) => {
         console.log(mpHeight)
 
         if (mpScroll + 1 >= mpHeight) {
-            if( !loading && commentList.length < 0) {
+            if( !loading && commentList.length > 0 ) {
                 console.log('불러오겠다!')
                 //로딩이 트루인 시점
                 setLoading(true)
@@ -76,15 +76,7 @@ const DailyView = ({onPage, D_styles ,seq, mainPage}) => {
                         .then(res => setCommentList(res.data))
                 }
         })
-
-        ////////스크롤 매커니즘///////////////
-            mainPage.addEventListener('scroll', handleScroll);
-            
-            return () => {
-                mainPage.removeEventListener('scroll', handleScroll);
-            };
-        ///////////////////////////////////
-    }, [])
+    }, [seq])
 
     useEffect(() => {
         ////////스크롤 매커니즘///////////////
@@ -94,7 +86,7 @@ const DailyView = ({onPage, D_styles ,seq, mainPage}) => {
                 mainPage.removeEventListener('scroll', handleScroll);
             };
         ///////////////////////////////////
-    },[commentCount,commentTotal,loading])
+    },[commentCount,commentTotal,loading,handleScroll,mainPage])
 
     const getToday = (logTime) => {
         const date = new Date(logTime)
@@ -183,7 +175,7 @@ const DailyView = ({onPage, D_styles ,seq, mainPage}) => {
                             {
                                 imgList.map((item, index) => 
                                     <img key={index} style={{ objectFit : 'cover', width : '350px', display: 'inline-block' }} 
-                                        src={item} onClick={ () => onModal(item) }/>)
+                                        src={item} onClick={ () => onModal(item) } alt='사진' />)
                             }
                         </div>
                         
@@ -220,7 +212,7 @@ const DailyView = ({onPage, D_styles ,seq, mainPage}) => {
 
             {modal && <div>
                 <div className={ D_styles.bgImg } onClick={ () => setModal(false)}/>
-                <img className={ D_styles.onImg } src={ modalImg }/>
+                <img className={ D_styles.onImg } src={ modalImg } alt='사진' />
             </div>
             }
 

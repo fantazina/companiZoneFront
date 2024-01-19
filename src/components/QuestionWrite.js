@@ -151,7 +151,7 @@ const QuestionWrite = ({onPage, Q_styles, userDTO, isLoggedIn}) => {
                             }
                         </span>
                         
-                        <img id='camera' src={ camera } alt='카메라' onClick={ onCamera } style={{ float : 'right', width: 100, height:100, borderRadius:20 }} />
+                        <img id='camera' src={ camera } alt='카메라' onClick={ onCamera } className={ Q_styles.img_camera } />
                         <input type='file' name='img[]' multiple='multiple' ref={ imgRef } onChange={ onImgInput } style={{ visibility: 'hidden' }} />
                     </div>
 

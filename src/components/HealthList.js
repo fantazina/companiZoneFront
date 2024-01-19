@@ -54,7 +54,7 @@ const HealthList = ({ onPage, onSeq, H_styles, pg, onPg, mainOnPage }) => {
     return (
         <div>
             <div className={ H_styles.upload_main }>
-                <h2 style={{ display : 'inline-block' }}>건강과 관리 게시판</h2>
+                <h2 style={{ display : 'inline-block' }}>건강 관리 게시판</h2>
                     <div className={ H_styles.search }>
                         <input placeholder='검색어를 입력해주세요.' type='text' value={ keyword } name='keyword' onChange={ e => setKeyword(e.target.value) } />                
                             { userDTO && 

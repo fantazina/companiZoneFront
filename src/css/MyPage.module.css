@@ -2,7 +2,7 @@
     width: 700px;
     max-width: 900px;
     min-height : 500px;
-    margin: 0 auto;
+    margin : 0 auto;
     height : 500px;
     font-weight: bold;
 }
@@ -11,30 +11,30 @@
     margin-top : 5px;
     padding-top : 20px;
     box-sizing: border-box;
-    border-bottom: 1px solid rgb(233,233,233);
+    border-bottom : 1px solid rgb(233,233,233);
 }
 .write_main {
     width : 700px;
     height : 500px;
     margin : 0 auto;
-    text-align: center;
+    text-align : center;
 }
 .name_start {
     box-sizing: border-box;
-    border-radius: 10px !important;
+    border-radius : 8px !important;
     padding-top : 30px;
 }
 .name_start input {
-    background-color: whitesmoke;
+    background-color : whitesmoke;
     border : none;
     width : 33%;
     height : 40px;
-    border-radius: 10px !important;
+    border-radius : 8px !important;
     margin-left : 20px;
     margin-top : 20px;
 } 
 .name_start input:focus {
-    outline: none;
+    outline : 2px solid cadetblue;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 .name_start label {
@@ -46,7 +46,7 @@
     box-sizing: border-box;
     padding : 6px 14px;
     height : 30px;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     margin : 25px;
     margin-left : 20px;
 }
@@ -56,12 +56,12 @@
     border : none;
     width : 33%;
     height : 30px;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     margin-left : 20px;
 }
 .id input:focus {
-    outline: none;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    outline : 2px solid cadetblue;
+    box-shadow : 0 0 6px rgba(0, 0, 0, 0.2);
 }
 .id label {
     padding-top: 8px;
@@ -71,7 +71,7 @@
     box-sizing: border-box;
     padding : 6px 14px;
     height : 30px;
-    border-radius: 10px !important;
+    border-radius : 8px !important;
     margin : 10px;
     padding-top : 20px;
     margin-left : -5px;
@@ -83,17 +83,17 @@
     width : 31%;
     height : 30px;
     margin-left : 20px;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
 }
 .pwd input:focus {
-    outline: none;
+    outline : 2px solid cadetblue;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 .pwd_re {
     box-sizing: border-box;
     padding : 6px 14px;
     height : 30px;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     margin : 10px;
     padding-top : 50px;
     margin-left : -37px;
@@ -105,28 +105,28 @@
     width : 30%;
     height : 30px;
     margin-left : 20px;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
 }
 .pwd_re input:focus {
-    outline: none;
+    outline : 2px solid cadetblue;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 .phone {
-    box-sizing: border-box;
-    border-radius: 10px !important;
+    box-sizing : border-box;
+    border-radius : 8px !important;
     padding-top : 55px;
     margin-left : -75px;
 }
 .phone input {
-    background-color: whitesmoke;
+    background-color : whitesmoke;
     border : none;
     width : 31%;
     height : 40px;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     margin-left : 20px;
 }
 .phone input:focus {
-    outline: none;
+    outline : 2px solid cadetblue;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 .label_phone {
@@ -146,7 +146,7 @@
     height : 35px;
     margin : 10px;
     border : 0;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     cursor: pointer;
     font-weight: bold;
     margin-top : 50px;
@@ -154,9 +154,10 @@
 }
 .buttons button:hover {
     background-color : cadetblue;
+    color : white;
 }
 .check {
-    display:  inline-block;
+    display :  inline-block;
     color: red;
     font-size: 14px;
 }
@@ -216,27 +217,27 @@
     box-sizing: border-box;
     padding : 6px 14px;
     height : 30px;
-    border-radius: 10px !important;
+    border-radius : 8px !important;
     margin : 10px;
 }
 .pwd_check span {
     display: inline-block;
-    margin-left: 20%;
+    margin-left : 20%;
     margin-top: 10%;
 } 
 .pwd_check input {    
     display: inline-block;
-    background-color: whitesmoke;
+    background-color : whitesmoke;
     padding : 6px 14px;
     border : none;
     cursor: pointer;
     height : 30px;
     width : 33%;
-    border-radius: 10px !important;
+    border-radius : 8px !important;
     margin-left: 20px;
 }
 .pwd_check input:focus {
-    outline: none;
+    outline: 2px solid cadetblue;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 .pwd_check button {
@@ -244,8 +245,8 @@
     border : none;
     width : 70px;
     height : 30px;
-    background-color: whitesmoke;
-    border-radius: 10px !important;
+    background-color : whitesmoke;
+    border-radius : 8px !important;
     cursor: pointer;
     margin : 10px 0px 0 20px;
     transition: 0.4s;

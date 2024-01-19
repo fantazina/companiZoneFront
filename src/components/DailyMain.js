@@ -4,7 +4,6 @@ import DailyView from './DailyView';
 import DailyUpdate from './DailyUpdate';
 import DailyWrite from './DailyWrite';
 import D_styles from '../css/Daily.module.css';
-import { Router } from 'react-router-dom';
 
 const DailyMain = ({mainPage,mainOnPage}) => {
     const [page, setPage] = useState(0)

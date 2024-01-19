@@ -18,8 +18,6 @@ const DailyWrite = ({onPage, D_styles, userDTO, isLoggedIn}) => {
     const [imgList, setImgList] = useState([])
     const [files, setFiles] = useState('')
 
-    const [file, setFile] = useState('')
-
     const onInput = (e) => {
         const { name, value } = e.target
 
@@ -34,13 +32,8 @@ const DailyWrite = ({onPage, D_styles, userDTO, isLoggedIn}) => {
     }
 
     const onImgInput = (e) => {
-        const imgFiles = Array.from(e.target.files)  //파일 담기
-        var imgArray = [] // 지역변수 초기화
-
-        imgFiles.map(item => {
-            const objectURL = URL.createObjectURL(item)
-            imgArray.push(objectURL)
-        }) 
+        const imgFiles = Array.from(e.target.files)
+        const imgArray = imgFiles.map(item => URL.createObjectURL(item));
         setImgList(imgArray)
         setFiles(e.target.files)
     }
@@ -121,7 +114,6 @@ const DailyWrite = ({onPage, D_styles, userDTO, isLoggedIn}) => {
                                     <option value='소/말/돼지'>소/말/돼지</option>
                                     <option value='소동물'>소동물</option>
                                     <option value='조류'>조류</option>
-                                    <option value='조류'>조류</option>
                                     <option value='어류'>어류</option>
                                     <option value='파충류'>파충류</option>
                                     <option value='양서류'>양서류</option>
@@ -153,8 +145,8 @@ const DailyWrite = ({onPage, D_styles, userDTO, isLoggedIn}) => {
                             }
                         </span>
                         
-                        <img id='camera' src={ camera } alt='카메라' onClick={ onCamera } style={{ float : 'right', width: 100, height:100, borderRadius:20 }} />
-                        <input type='file' name='img[]' multiple='multiple' ref={ imgRef } onChange={ onImgInput } style={{ visibility: 'hidden' }} />
+                        <img id='camera' src={ camera } alt='카메라' onClick={ onCamera } className={ D_styles.img_camera } />
+                        <input type='file' name='img[]' multiple='multiple' ref={ imgRef } onChange={ onImgInput } style={{ visibility: 'hidden' }} alt='사진' />
                     </div>
 
                     <div className={ D_styles.text_img }>

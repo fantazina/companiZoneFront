@@ -30,7 +30,7 @@ const IntroductionView = ({onPage, I_styles ,seq, mainPage}) => {
         console.log(mpHeight)
 
         if (mpScroll + 1 >= mpHeight) {
-            if( !loading && commentList.length < 0) {
+            if( !loading && commentList.length > 0) {
                 console.log('불러오겠다!')
                 //로딩이 트루인 시점
                 setLoading(true)
@@ -77,25 +77,15 @@ const IntroductionView = ({onPage, I_styles ,seq, mainPage}) => {
                         
                 }
         })
-
+        
         ////////스크롤 매커니즘///////////////
-            mainPage.addEventListener('scroll', handleScroll);
+        mainPage.addEventListener('scroll', handleScroll);
             
-            return () => {
-                mainPage.removeEventListener('scroll', handleScroll);
-            };
-        ///////////////////////////////////
-    }, [])
-
-    useEffect(() => {
-        ////////스크롤 매커니즘///////////////
-            mainPage.addEventListener('scroll', handleScroll);
-
-            return () => {
-                mainPage.removeEventListener('scroll', handleScroll);
-            };
-        ///////////////////////////////////
-    },[commentCount,commentTotal,loading])
+        return () => {
+            mainPage.removeEventListener('scroll', handleScroll);
+        };
+    ///////////////////////////////////
+}, [handleScroll, mainPage, seq, commentCount,commentTotal,loading])
 
     const getToday = (logTime) => {
         const date = new Date(logTime)
