@@ -84,7 +84,7 @@ const QuestionView = ({onPage, Q_styles ,seq, mainPage}) => {
 
             return () => {
                 mainPage.removeEventListener('scroll', handleScroll);
-            };
+            }
         ///////////////////////////////////
     },[mainPage, loading, commentCount, commentList, commentTotal,seq,handleScroll])
 
@@ -95,9 +95,12 @@ const QuestionView = ({onPage, Q_styles ,seq, mainPage}) => {
         const hour = date.getHours();
         const minutes = date.getMinutes();
 
-        return `${month.toString().padStart(2, '0')}.${day.toString().padStart(2, '0')} 
-        ${hour.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+        return (
+            `${month.toString().padStart(2, '0')}.${day.toString().padStart(2, '0')} 
+            ${hour.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+        )
     }
+    
     
     const onDeleteSubmit = ()=> {
         axios.delete(`http://localhost:8080/write/delete/${seq}`)

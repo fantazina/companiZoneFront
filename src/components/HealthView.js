@@ -87,7 +87,7 @@ const HealthView = ({onPage, H_styles ,seq, mainPage}) => {
                 mainPage.removeEventListener('scroll', handleScroll);
             };
         ///////////////////////////////////
-    },[mainPage, loading, commentCount, commentList, commentTotal,seq,handleScroll)
+    },[mainPage, loading, commentCount, commentList, commentTotal,seq,handleScroll])
 
     const getToday = (logTime) => {
         const date = new Date(logTime)
