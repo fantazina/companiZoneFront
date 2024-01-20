@@ -86,7 +86,7 @@ const QuestionView = ({onPage, Q_styles ,seq, mainPage}) => {
                 mainPage.removeEventListener('scroll', handleScroll);
             };
         ///////////////////////////////////
-    },[mainPage, loading, commentCount, commentList, commentTotal,seq])
+    },[mainPage, loading, commentCount, commentList, commentTotal,seq,handleScroll])
 
     const getToday = (logTime) => {
         const date = new Date(logTime)
@@ -175,7 +175,7 @@ const QuestionView = ({onPage, Q_styles ,seq, mainPage}) => {
                             {
                                 imgList.map((item, index) => 
                                     <img key={index} style={{ objectFit : 'cover', width : '350px', display: 'inline-block' }} 
-                                        src={item} onClick={ () => onModal(item) }/>)
+                                        src={item} onClick={ () => onModal(item) } alt='사진'/>)
                             }
                         </div>
                         

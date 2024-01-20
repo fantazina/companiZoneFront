@@ -86,7 +86,7 @@ const DailyView = ({onPage, D_styles ,seq, mainPage}) => {
                 mainPage.removeEventListener('scroll', handleScroll);
             };
         ///////////////////////////////////
-    },[mainPage, loading, commentCount, commentList, commentTotal,seq])
+    },[mainPage, loading, commentCount, commentList, commentTotal,seq,handleScroll])
 
     const getToday = (logTime) => {
         const date = new Date(logTime)

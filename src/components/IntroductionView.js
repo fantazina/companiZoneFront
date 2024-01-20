@@ -46,7 +46,7 @@ const IntroductionView = ({onPage, I_styles ,seq, mainPage}) => {
                 console.log('로딩중')
             }
         }
-      },[mainPage, loading, commentCount, commentList, commentTotal, seq])
+      },[mainPage, loading, commentCount, commentList, commentTotal, seq,handleScroll])
     ////////////////////////////////////////////
 
     const onChangePage = (pg) => {
@@ -176,7 +176,7 @@ const IntroductionView = ({onPage, I_styles ,seq, mainPage}) => {
                             {
                                 imgList.map((item, index) => 
                                     <img key={index} style={{ objectFit : 'cover', width : '350px', display: 'inline-block' }} 
-                                        src={item} onClick={ () => onModal(item) }/>)
+                                        src={item} onClick={ () => onModal(item) } alt='사진'/>)
                             }
                         </div>
                         

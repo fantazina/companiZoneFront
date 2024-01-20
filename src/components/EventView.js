@@ -45,7 +45,7 @@ const EventView = ({onPage, E_styles ,seq, mainPage}) => {
                 console.log('로딩중')
             }
         }
-      },[mainPage, loading, commentCount, commentList, commentTotal, seq])
+      },[mainPage, loading, commentCount, commentList, commentTotal, seq,handleScroll])
     ////////////////////////////////////////////
 
     const onChangePage = (pg) => {
