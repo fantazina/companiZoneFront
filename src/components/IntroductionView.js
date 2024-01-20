@@ -46,7 +46,7 @@ const IntroductionView = ({onPage, I_styles ,seq, mainPage}) => {
                 console.log('로딩중')
             }
         }
-      },[mainPage, loading, commentCount, commentList, commentTotal, seq,handleScroll])
+      },[mainPage, loading, commentCount, commentList, commentTotal, seq])
     ////////////////////////////////////////////
 
     const onChangePage = (pg) => {
@@ -87,7 +87,7 @@ const IntroductionView = ({onPage, I_styles ,seq, mainPage}) => {
                 mainPage.removeEventListener('scroll', handleScroll);
             };
         ///////////////////////////////////
-    },[mainPage, loading, commentCount, commentList, commentTotal,seq])
+    },[mainPage, loading, commentCount, commentList, commentTotal,seq,handleScroll])
 
     const getToday = (logTime) => {
         const date = new Date(logTime)
@@ -146,7 +146,7 @@ const IntroductionView = ({onPage, I_styles ,seq, mainPage}) => {
 
                 setCommentList(commentList.filter(item => item.commentSeq !== commentSeq))
         })
-    }   
+    } 
 
     return (
         <div>
