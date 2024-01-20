@@ -1,12 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 
 const PresentList = ({ onPage, onSeq, P_styles, pg, onPg, mainOnPage }) => {
     
     const userDTO = JSON.parse(window.sessionStorage.getItem('userDTO'))
 
-    const {page} = useParams()
     const[list, setList] = useState([])
 
     const[keyword, setKeyword] = useState('')
@@ -24,7 +22,7 @@ const PresentList = ({ onPage, onSeq, P_styles, pg, onPg, mainOnPage }) => {
             }
             setPageList(pl)
         })
-    },[])
+    },[keyword, pg])
     
     const getToday = (logTime) => {
         const date = new Date(logTime)

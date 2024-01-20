@@ -19,12 +19,12 @@ const HealthMain = ({ mainPage, mainOnPage }) => {
     }
 
     const onPg = (num) => {
-        setPage(num)
+        setPg(num)
     }
 
     return (
         <div>
-            { page === 0 && <HealthList H_styles={ H_styles } onPage={ onPage } onSeq={ onSeq } pg={ pg } mainOnPage={ mainOnPage } />}
+            { page === 0 && <HealthList H_styles={ H_styles } onPage={ onPage } onSeq={ onSeq } pg={ pg } onPg={ onPg } mainOnPage={mainOnPage} />}
             { page === 1 && <HealthView H_styles={ H_styles } onPage={ onPage } seq={ seq } mainPage={ mainPage }  />}
             { page === 2 && <HealthWrite H_styles={ H_styles } onPage={ onPage } />}
             { page === 3 && <HealthUpdate H_styles={ H_styles } onPage={ onPage } seq={ seq } pg={ pg } />}

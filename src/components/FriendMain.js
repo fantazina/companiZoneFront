@@ -19,13 +19,13 @@ const FriendMain = ({mainPage, mainOnPage}) => {
     }
 
     const onPg = (num) => {
-        setPage(num)
+        setPg(num)
     }
 
     
     return (
         <div>
-            { page === 0 && <FriendList F_styles={ F_styles } onPage={ onPage } onSeq={ onSeq } pg={ pg } mainOnPage={mainOnPage} />}
+            { page === 0 && <FriendList F_styles={ F_styles } onPage={ onPage } onSeq={ onSeq } pg={ pg } onPg={ onPg } mainOnPage={mainOnPage} />}
             { page === 1 && <FriendView F_styles={ F_styles } onPage={ onPage } seq={ seq } mainPage={ mainPage }/>}
             { page === 2 && <FriendWrite F_styles={ F_styles } onPage={ onPage } />}
             { page === 3 && <FriendUpdate F_styles={ F_styles } onPage={ onPage } seq={ seq } pg={ pg } />}

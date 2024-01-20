@@ -24,7 +24,7 @@ const QuestionMain = ({mainPage, mainOnPage}) => {
 
     return (
         <div>
-            { page === 0 && <QuestionList Q_styles={ Q_styles } onPage={ onPage } onSeq={ onSeq } pg={ pg } mainOnPage={mainOnPage}/>}
+            { page === 0 && <QuestionList Q_styles={ Q_styles } onPage={ onPage } onSeq={ onSeq } pg={ pg } onPg={ onPg } mainOnPage={mainOnPage}/>}
             { page === 1 && <QuestionView Q_styles={ Q_styles } onPage={ onPage } seq={ seq } mainPage={ mainPage } />}
             { page === 2 && <QuestionWrite Q_styles={ Q_styles } onPage={ onPage } />}
             { page === 3 && <QuestionUpdate Q_styles={ Q_styles } onPage={ onPage } seq={ seq } pg={ pg } />}

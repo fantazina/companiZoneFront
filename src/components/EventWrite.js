@@ -15,7 +15,6 @@ const EventWrite = ({onPage, E_styles, userDTO, isLoggedIn}) => {
     })
     
     const [imgList, setImgList] = useState([])
-    const [files, setFiles] = useState('')
 
     const onInput = (e) => {
         const { name, value } = e.target
@@ -34,7 +33,6 @@ const EventWrite = ({onPage, E_styles, userDTO, isLoggedIn}) => {
         const imgFiles = Array.from(e.target.files)
         const imgArray = imgFiles.map(item => URL.createObjectURL(item));
         setImgList(imgArray)
-        setFiles(e.target.files)
     }
 
     const onWriteSubmit = (e) => {

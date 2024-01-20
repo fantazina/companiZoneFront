@@ -102,7 +102,7 @@ const MyPage = ({onPage}) => {
                     <div className={ M_styles.name_start }>
                         <label htmlfor='name'>이름</label>
                         <input placeholder='이름을 입력해주세요.' name='name' value={ userDTO.name } onChange={ onInputChange } style={{ paddingLeft : '10px' }}/>
-                        <div className={ M_styles.check }></div>
+                        <div className={ M_styles.check }>{nameError}</div>
                     </div>
 
                     <div className={ M_styles.id }>
@@ -114,20 +114,20 @@ const MyPage = ({onPage}) => {
                     <div className={ M_styles.pwd }>
                         <label htmlfor='pwd'>비밀번호</label>
                         <input placeholder='비밀번호를 입력해주세요.' name='pwd' type='password' value={ userDTO.pwd } onChange={ onInputChange } />
-                        <div className={ M_styles.check }></div>
+                        <div className={ M_styles.check }>{pwdError}</div>
                     </div>
 
                     <div className={ M_styles.pwd_re }>
                         <label htmlfor='pwd_re'>비밀번호 확인</label>
                         <input placeholder='동일한 비밀번호를 입력해주세요.' name='pwd_re' type='password' value={ userDTO.pwd_re } onChange={ onInputChange } />
-                        <div className={ M_styles.check }></div>
+                        <div className={ M_styles.check }>{pwd_reError}</div>
                     </div>
 
                     
                     <div className={ M_styles.phone }>
                         <label className={ M_styles.label_phone }>휴대전화 번호</label>
                         <input placeholder='하이픈(-)을 빼고 입력해주세요.' type='tel' name='tel' value={ userDTO.tel } onChange={ onInputChange } style={{ paddingLeft : '10px' }}/>
-                        <div className={ M_styles.check }></div>
+                        <div className={ M_styles.check }>{telError}</div>
                     </div>
 
                     <div style={{ clear : 'both' }}/>

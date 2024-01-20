@@ -17,7 +17,7 @@ const IntroductionUpdate = ({I_styles, onPage, seq}) => {
                 setImgList(res.data.images !== '' ? res.data.images.split(',') : [])
 
             })
-    }, [])
+    }, [seq])
 
     const onInput = (e) => {
         const {name, value} = e.target

@@ -24,7 +24,7 @@ const PresentMain = ({mainPage,mainOnPage}) => {
 
     return (
         <div>
-            { page === 0 && <PresentList P_styles={ P_styles } onPage={ onPage } onSeq={ onSeq } pg={ pg } mainOnPage={mainOnPage} />}
+            { page === 0 && <PresentList P_styles={ P_styles } onPage={ onPage } onSeq={ onSeq } pg={ pg } onPg={ onPg } mainOnPage={mainOnPage} />}
             { page === 1 && <PresentView P_styles={ P_styles } onPage={ onPage } seq={ seq } mainPage={ mainPage } />}
             { page === 2 && <PresentWrite P_styles={ P_styles } onPage={ onPage } />}
             { page === 3 && <PresentUpdate P_styles={ P_styles } onPage={ onPage } seq={ seq } pg={ pg }  />}

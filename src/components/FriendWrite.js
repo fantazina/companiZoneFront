@@ -15,9 +15,6 @@ const FriendWrite = ({onPage, F_styles, userDTO, isLoggedIn}) => {
     })
     
     const [imgList, setImgList] = useState([])
-    const [files, setFiles] = useState('')
-
-    const [file, setFile] = useState('')
 
     const onInput = (e) => {
         const { name, value } = e.target
@@ -33,15 +30,9 @@ const FriendWrite = ({onPage, F_styles, userDTO, isLoggedIn}) => {
     }
 
     const onImgInput = (e) => {
-        const imgFiles = Array.from(e.target.files)  //파일 담기
-        var imgArray = [] // 지역변수 초기화
-
-        imgFiles.map(item => {
-            const objectURL = URL.createObjectURL(item)
-            imgArray.push(objectURL)
-        }) 
+        const imgFiles = Array.from(e.target.files)
+        const imgArray = imgFiles.map(item => URL.createObjectURL(item));
         setImgList(imgArray)
-        setFiles(e.target.files)
     }
 
     const onWriteSubmit = (e) => {
@@ -148,7 +139,7 @@ const FriendWrite = ({onPage, F_styles, userDTO, isLoggedIn}) => {
                                 // 선택한 이미지를 미리보기
                                 imgList.map((item, index) => <img key={ index } 
                                                                     src={ item } 
-                                                                    style={{ width: '100px', height: '100px' }} />)
+                                                                    style={{ width: '100px', height: '100px' }} alt='사진' />)
                             }
                         </span>
                         

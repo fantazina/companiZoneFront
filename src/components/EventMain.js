@@ -19,11 +19,11 @@ const EventMain = ({mainPage,mainOnPage}) => {
     }
 
     const onPg = (num) => {
-        setPage(num)
+        setPg(num)
     }
     return (
         <div>
-            { page === 0 && <EventList E_styles={ E_styles }onPage={ onPage } onSeq={ onSeq } pg={ pg } onPg={ onPg } mainOnPage={mainOnPage}/> }
+            { page === 0 && <EventList E_styles={ E_styles } onPage={ onPage } onSeq={ onSeq } pg={ pg } onPg={ onPg } mainOnPage={mainOnPage}/> }
             { page === 1 && <EventView E_styles={ E_styles } onPage={ onPage } seq={ seq } mainPage={ mainPage } /> }
             { page === 2 && <EventWrite E_styles={ E_styles } onPage={ onPage } /> }
             { page === 3 && <EventUpdate E_styles={ E_styles } onPage={ onPage } seq={ seq } /> }

@@ -24,7 +24,7 @@ const IntroductionMain = ({mainPage, mainOnPage }) => {
 
     return (
         <div>
-            { page === 0 && <IntroductionList I_styles={ I_styles } onPage={ onPage } onSeq={ onSeq } pg={ pg } mainOnPage={ mainOnPage } />}
+            { page === 0 && <IntroductionList I_styles={ I_styles } onPage={ onPage } onSeq={ onSeq } pg={ pg } onPg={ onPg } mainOnPage={mainOnPage} />}
             { page === 1 && <IntroductionView I_styles={ I_styles } seq={ seq } onPage={ onPage } mainPage={ mainPage } />}
             { page === 2 && <IntroductionWrite I_styles={ I_styles } onPage={ onPage } />}
             { page === 3 && <IntroductionUpdate I_styles={ I_styles } onPage={ onPage } seq={ seq }/>}
