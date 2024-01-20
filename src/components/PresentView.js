@@ -125,8 +125,8 @@ const PresentView = ({onPage, P_styles ,seq, mainPage}) => {
         setCommentDTO({
             ...commentDTO,
             [name] : value 
-        });
-    };
+        })
+    }
 
     const onCommentSubmit = () => {
         axios.post(`http://localhost:8080/comment/write`, commentDTO)

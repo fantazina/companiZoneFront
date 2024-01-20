@@ -148,7 +148,7 @@ const FriendUpdate = ({F_styles, onPage, seq}) => {
                                     // 선택한 이미지를 미리보기
                                     imgList.map((item, index) => <img key={ index } 
                                                                         src={ item } 
-                                                                        style={{ width: '100px', height: '100px' }} />)
+                                                                        style={{ width: '100px', height: '100px' }} alt='사진' />)
                                 }
                             </span>
 
