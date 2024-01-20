@@ -19,7 +19,7 @@ const PresentMain = ({mainPage,mainOnPage}) => {
     }
 
     const onPg = (num) => {
-        setPage(num)
+        setPg(num)
     }
 
     return (

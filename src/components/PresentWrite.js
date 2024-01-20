@@ -15,9 +15,6 @@ const PresentWrite = ({onPage, P_styles, userDTO, isLoggedIn}) => {
     })
     
     const [imgList, setImgList] = useState([])
-    const [files, setFiles] = useState('')
-
-    const [file, setFile] = useState('')
 
     const onInput = (e) => {
         const { name, value } = e.target
@@ -33,15 +30,9 @@ const PresentWrite = ({onPage, P_styles, userDTO, isLoggedIn}) => {
     }
 
     const onImgInput = (e) => {
-        const imgFiles = Array.from(e.target.files)  //파일 담기
-        var imgArray = [] // 지역변수 초기화
-
-        imgFiles.map(item => {
-            const objectURL = URL.createObjectURL(item)
-            imgArray.push(objectURL)
-        }) 
+        const imgFiles = Array.from(e.target.files)
+        const imgArray = imgFiles.map(item => URL.createObjectURL(item));
         setImgList(imgArray)
-        setFiles(e.target.files)
     }
 
     const onWriteSubmit = (e) => {

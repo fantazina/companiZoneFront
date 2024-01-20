@@ -19,7 +19,7 @@ const QuestionMain = ({mainPage, mainOnPage}) => {
     }
 
     const onPg = (num) => {
-        setPage(num)
+        setPg(num)
     }
 
     return (

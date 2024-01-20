@@ -17,142 +17,136 @@ const EventView = ({onPage, E_styles ,seq, mainPage}) => {
     const [commentCount, setCommentCount] = useState(0);
     const [loading, setLoading] = useState(false);
 
-    //////////////스크롤 매커니즘////////////////
-    const handleScroll = useCallback(() => {
-        const mpScroll = mainPage.scrollTop + mainPage.clientHeight;
+  //////////////스크롤 매커니즘////////////////
+  const handleScroll = () => {
 
-        console.log(mpScroll);
+    const mpScroll= mainPage.scrollTop + mainPage.clientHeight;
 
-        const mpHeight = mainPage.scrollHeight;
+    console.log(mpScroll)
 
-        console.log(mpHeight);
+    const mpHeight = mainPage.scrollHeight;
 
-        if (mpScroll + 1 >= mpHeight) {
-            if (!loading && commentList.length > 0) {
-                console.log('불러오겠다!');
-                //로딩이 트루인 시점
-                setLoading(true);
-                axios.get(`http://localhost:8080/comment/getList/${seq}`, { 
-                    params: { 
-                        commentCount: commentCount + 10 > commentTotal ? commentTotal : commentCount + 10 
-                    } 
-                }).then(res => {
-                    setCommentList(res.data);
-                    //////////////////////////////////
-                    setLoading(false);
-                });
-                setCommentCount(commentCount + 10);
-            } else {
-                console.log('로딩중');
-            }
-        }
-    }, [mainPage, loading, commentCount, commentList, commentTotal, seq]);
-    ////////////////////////////////////////////
+    console.log(mpHeight)
 
-    const onChangePage = (pg) => {
-        onPage(pg);
-    };
-    const onModal = (item) => {
-        setModal(true);
-        setModalImg(item);
-    };
-
-    useEffect(() => {
-        axios.get(`http://localhost:8080/write/getView/${seq}`)
-             .then(res => { 
-                setWriteDTO(res.data);
-                setImgList(res.data.images.split(','));
-            });
-
-        axios.get(`http://localhost:8080/comment/getTotal/${seq}`)
+    if (mpScroll + 1 >= mpHeight) {
+        if( !loading && commentList.length > 0 ) {
+            console.log('불러오겠다!')
+            //로딩이 트루인 시점
+            setLoading(true)
+            axios.get(`http://localhost:8080/comment/getList/${seq}`,{ params: { 
+                commentCount : commentCount + 10 > commentTotal ? commentTotal : commentCount + 10 } })
             .then(res => {
-                setCommentTotal(res.data);
-                setCommentCount(res.data < 10 ? res.data : 10 );
-
-                if (res.data > 0) {
-                    //total가져오는 axios를 먼저 사용해야 commentCount를 알수있으니까!
-                    axios.get(`http://localhost:8080/comment/getList/${seq}`, { 
-                        params: { commentCount: res.data < 10 ? res.data : 10 } 
-                    }).then(res => setCommentList(res.data));
-                }    
-            });
-
-        ////////스크롤 매커니즘///////////////
-        mainPage.addEventListener('scroll', handleScroll);
-            
-        return () => {
-            mainPage.removeEventListener('scroll', handleScroll);
-        };
-        ///////////////////////////////////
-    }, [seq, handleScroll]);
-
-    useEffect(() => {
-        ////////스크롤 매커니즘///////////////
-        mainPage.addEventListener('scroll', handleScroll);
-
-        return () => {
-            mainPage.removeEventListener('scroll', handleScroll);
-        };
-        ///////////////////////////////////
-    }, [handleScroll]);
-
-    const getToday = (logTime) => {
-        const date = new Date(logTime);
-        const day = date.getDate();
-        const month = date.getMonth() + 1;
-        const hour = date.getHours();
-        const minutes = date.getMinutes();
-
-        return `${month.toString().padStart(2, '0')}.${day.toString().padStart(2, '0')} 
-        ${hour.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
-    };
-    
-    const onDeleteSubmit = () => {
-        axios.delete(`http://localhost:8080/write/delete/${seq}`)
-             .then(res => {
-                 alert('글이 삭제되었습니다.');
-                 onPage(0);
-             })   
-             .catch((error) => {
-                alert('삭제 실패');
-                // 실패 시 처리
-             });
-    };
-
-    const onInput = (e) => {
-        const { name, value } = e.target;
-
-        setCommentDTO({
-            ...commentDTO,
-            [name] : value 
-        });
-    };
-
-    const onCommentSubmit = () => {
-        axios.post(`http://localhost:8080/comment/write`, commentDTO)
-             .then(res => {
-                setCommentDTO({
-                    ...commentDTO,
-                    content: ''
-                });
-                setCommentList([
-                    res.data,       
-                    ...commentList
-                ]);
-                axios.get(`http://localhost:8080/comment/getTotal/${seq}`)
-                .then(res => setCommentTotal(res.data));
-        });
-    };
-
-    const onCommentDelete = (commentSeq) => {
-        axios.delete(`http://localhost:8080/comment/delete/${commentSeq}`)
-             .then((res) => {
-                axios.get(`http://localhost:8080/comment/getTotal/${seq}`)
-                .then(res => setCommentTotal(res.data));
-                setCommentList(commentList.filter(item => item.commentSeq !== commentSeq));
-        })
+                setCommentList(res.data)
+            //////////////////////////////////
+                setLoading(false)
+            })
+            setCommentCount(commentCount + 10)
+        } else {
+            console.log('로딩중')
+        }
     }
-    
+  };
+////////////////////////////////////////////
+
+const onChangePage = (pg) => {
+    onPage(pg)
+}
+
+const onModal = (item) => {
+    setModal(true)
+    setModalImg(item)
+}
+
+useEffect(() => {
+    axios.get(`http://localhost:8080/write/getView/${seq}`)
+         .then(res => { 
+             setWriteDTO(res.data)
+             setImgList(res.data.images.split(','))
+            
+        })
+
+
+    axios.get(`http://localhost:8080/comment/getTotal/${seq}`)
+        .then(res => {
+            setCommentTotal(res.data)
+            setCommentCount(res.data < 10 ? res.data : 10 )
+            //total가져오는 axios를 먼저 사용해야 commentCount를 알수있으니까!
+            if(res.data > 0) {
+                axios.get(`http://localhost:8080/comment/getList/${seq}`,{ params: { commentCount : res.data < 10 ? res.data : 10 } })
+                    .then(res => setCommentList(res.data))
+            }
+    })
+}, [seq])
+
+useEffect(() => {
+    ////////스크롤 매커니즘///////////////
+        mainPage.addEventListener('scroll', handleScroll);
+
+        return () => {
+            mainPage.removeEventListener('scroll', handleScroll);
+        };
+    ///////////////////////////////////
+},[mainPage, loading, commentCount, commentList, commentTotal,handleScroll])
+
+const getToday = (logTime) => {
+    const date = new Date(logTime)
+    const day = date.getDate();
+    const month = date.getMonth()+1;
+    const hour = date.getHours();
+    const minutes = date.getMinutes();
+
+    return `${month.toString().padStart(2, '0')}.${day.toString().padStart(2, '0')} 
+    ${hour.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+}
+
+const onDeleteSubmit = ()=> {
+    axios.delete(`http://localhost:8080/write/delete/${seq}`)
+         .then(res => {
+         alert('글이 삭제되었습니다.')
+         onPage(0)
+         })   
+
+        .catch((error) => {
+        alert('삭제 실패');
+        // 실패 시 처리
+        });
+}
+
+const onInput = (e) => {
+    const{name, value} = e.target
+
+    setCommentDTO({
+        ...commentDTO,
+        [name] : value 
+    })
+
+}
+const onCommentSubmit = () => {
+    axios.post(`http://localhost:8080/comment/write`, commentDTO)
+         .then(res => {
+            setCommentDTO({
+                ...commentDTO,
+                content : ''
+            })
+            setCommentList([
+                res.data,       
+                ...commentList
+            ]);
+            axios.get(`http://localhost:8080/comment/getTotal/${seq}`)
+            .then(res => setCommentTotal(res.data))
+    })
+}
+
+const onCommentDelete = (commentSeq) => {
+    axios.delete(`http://localhost:8080/comment/delete/${commentSeq}`)
+         .then((res) => {
+            axios.get(`http://localhost:8080/comment/getTotal/${seq}`)
+            .then(res => setCommentTotal(res.data))
+
+            setCommentList(commentList.filter(item => item.commentSeq !== commentSeq))
+    })
+}
+
     return (
         <div>
             <div className={ E_styles.view_container }>
