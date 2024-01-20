@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 const QuestionView = ({onPage, Q_styles ,seq, mainPage}) => {
        
