@@ -95,10 +95,8 @@ const QuestionView = ({onPage, Q_styles ,seq, mainPage}) => {
         const hour = date.getHours();
         const minutes = date.getMinutes();
 
-        return (
-            `${month.toString().padStart(2, '0')}.${day.toString().padStart(2, '0')} 
+        return `${month.toString().padStart(2, '0')}.${day.toString().padStart(2, '0')} 
             ${hour.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
-        )
     }
     
     
