@@ -9,7 +9,6 @@ const EventUpdate = ({E_styles, onPage, seq}) => {
     const[writeDTO, setWriteDTO] = useState()
 
     const[imgList, setImgList] = useState([])
-    const[files, setFiles] = useState('')
 
     useEffect(() => {
         axios.get(`http://localhost:8080/write/getUp/${seq}`)
@@ -37,8 +36,6 @@ const EventUpdate = ({E_styles, onPage, seq}) => {
         const imgFiles = Array.from(e.target.files)
         const imgArray = imgFiles.map(item => URL.createObjectURL(item));
         setImgList(imgArray)
-        setFiles(e.target.files)
-        setFiles(e.target.files)
     }
 
     const onUpdateSubmit = (e) => {

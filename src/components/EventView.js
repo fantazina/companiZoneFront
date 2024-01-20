@@ -92,7 +92,7 @@ const EventView = ({onPage, E_styles ,seq, mainPage}) => {
                 mainPage.removeEventListener('scroll', handleScroll);
             };
         ///////////////////////////////////
-    },[commentCount,commentTotal,loading,handleScroll,mainPage])
+    },[mainPage, loading, commentCount, commentList, commentTotal])
 
     const getToday = (logTime) => {
         const date = new Date(logTime)
