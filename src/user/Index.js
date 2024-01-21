@@ -13,6 +13,7 @@ const Index = () => {
                             <h3>안녕하슈!</h3>
                                 <span style={{ display: 'flex' }}>반려존재와 집사를 위한 커뮤니티! </span>
                                 <span style={{ display: 'flex' }}>세상의 모든 반려존재를 위한 반려Zone입니다. </span>
+                                <br/>
                                 <span style={{ display: 'flex', marginTop : '50px;' }}> 호스트 : 해피 (행복이)</span>
                         </div>
                 </div>

@@ -20,8 +20,8 @@ const Header = ({onPage}) => {
                 <img style={{ width : '325px', paddingTop : '25px', paddingLeft :'20px',objectFit: 'contain'}} id='logo' src={ logo } alt='로고' />
                     {!userDTO && (
                         <div className={ styles.header_span }>
-                                <span onClick={ () => onPage(2) }>로그인</span>
-                                <span onClick={ () => onPage(1) }>  |  회원가입</span>
+                            <span onClick={ () => onPage(2) }>로그인</span>
+                            <span onClick={ () => onPage(1) }>  |  회원가입</span>
                         </div>
                     )}
                 {userDTO && (
