@@ -33,7 +33,7 @@ const EventView = ({onPage, E_styles ,seq, mainPage}) => {
                 console.log('불러오겠다!')
                 //로딩이 트루인 시점
                 setLoading(true)
-                axios.get(`http://localhost:8080/comment/getList/${seq}`,{ params: { 
+                axios.get(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/comment/getList/${seq}`,{ params: { 
                     commentCount : commentCount + 10 > commentTotal ? commentTotal : commentCount + 10 } })
                 .then(res => {
                     setCommentList(res.data)
@@ -58,7 +58,7 @@ const EventView = ({onPage, E_styles ,seq, mainPage}) => {
     }
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/write/getView/${seq}`)
+        axios.get(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/write/getView/${seq}`)
              .then(res => { 
                  setWriteDTO(res.data)
                  setImgList(res.data.images.split(','))
@@ -66,13 +66,13 @@ const EventView = ({onPage, E_styles ,seq, mainPage}) => {
             })
 
 
-        axios.get(`http://localhost:8080/comment/getTotal/${seq}`)
+        axios.get(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/comment/getTotal/${seq}`)
             .then(res => {
                 setCommentTotal(res.data)
                 setCommentCount(res.data < 10 ? res.data : 10 )
                 //total가져오는 axios를 먼저 사용해야 commentCount를 알수있으니까!
                 if(res.data > 0) {
-                    axios.get(`http://localhost:8080/comment/getList/${seq}`,{ params: { commentCount : res.data < 10 ? res.data : 10 } })
+                    axios.get(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/comment/getList/${seq}`,{ params: { commentCount : res.data < 10 ? res.data : 10 } })
                         .then(res => setCommentList(res.data))
                 }
         })
@@ -100,7 +100,7 @@ const EventView = ({onPage, E_styles ,seq, mainPage}) => {
     }
     
     const onDeleteSubmit = ()=> {
-        axios.delete(`http://localhost:8080/write/delete/${seq}`)
+        axios.delete(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/write/delete/${seq}`)
              .then(res => {
              alert('글이 삭제되었습니다.')
              onPage(0)
@@ -122,7 +122,7 @@ const EventView = ({onPage, E_styles ,seq, mainPage}) => {
 
     }
     const onCommentSubmit = () => {
-        axios.post(`http://localhost:8080/comment/write`, commentDTO)
+        axios.post(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/comment/write`, commentDTO)
              .then(res => {
                 setCommentDTO({
                     ...commentDTO,
@@ -132,15 +132,15 @@ const EventView = ({onPage, E_styles ,seq, mainPage}) => {
                     res.data,       
                     ...commentList
                 ]);
-                axios.get(`http://localhost:8080/comment/getTotal/${seq}`)
+                axios.get(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/comment/getTotal/${seq}`)
                 .then(res => setCommentTotal(res.data))
         })
     }
 
     const onCommentDelete = (commentSeq) => {
-        axios.delete(`http://localhost:8080/comment/delete/${commentSeq}`)
+        axios.delete(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/comment/delete/${commentSeq}`)
              .then((res) => {
-                axios.get(`http://localhost:8080/comment/getTotal/${seq}`)
+                axios.get(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/comment/getTotal/${seq}`)
                 .then(res => setCommentTotal(res.data))
 
                 setCommentList(commentList.filter(item => item.commentSeq !== commentSeq))

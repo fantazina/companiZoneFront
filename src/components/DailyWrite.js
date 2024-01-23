@@ -70,10 +70,10 @@ const DailyWrite = ({onPage, D_styles}) => {
                     });
                 }))
                 .then(() => {
-                    axios.post(`http://localhost:8080/storage/upload`, formData)
+                    axios.post(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/storage/upload`, formData)
                          .then(res => {
                                 const wrDTO = {...writeDTO, images: res.data};
-                                axios.post(`http://localhost:8080/write/write`, wrDTO)
+                                axios.post(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/write/write`, wrDTO)
                                      .then(() => {
                                      alert('글 작성이 완료되었습니다.')
 
@@ -86,7 +86,7 @@ const DailyWrite = ({onPage, D_styles}) => {
             }
 
             else{
-                    axios.post(`http://localhost:8080/write/write`, writeDTO)
+                    axios.post(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/write/write`, writeDTO)
                          .then(() => {
                           alert('글 작성이 완료되었습니다.')
                           onPage(0)

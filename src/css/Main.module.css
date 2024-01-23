@@ -9,9 +9,10 @@
     background-color: cadetblue;
     border-radius: 8px;
 }
+
 /* *************************************** */
 .main_container {
-    width : 1200px;
+    width : 1090px;
     height : 858px;
     margin : 0 auto;
 }
@@ -158,7 +159,8 @@
     color: red;
     font-size: 14px;
 }
-/* 미디어 쿼리
+
+미디어 쿼리
 @media (max-width: 1199px) {
     .main_page {
         width : 100%;
@@ -170,4 +172,4 @@
     .header_span2 {
         width : 100%;
     }
-} */
+}

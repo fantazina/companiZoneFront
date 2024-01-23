@@ -11,7 +11,7 @@ const IntroductionUpdate = ({I_styles, onPage, seq}) => {
     const[imgList, setImgList] = useState([])
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/write/getUp/${seq}`)
+        axios.get(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/write/getUp/${seq}`)
              .then(res => {
                 setWriteDTO({...res.data, images: ''})
                 setImgList(res.data.images !== '' ? res.data.images.split(',') : [])
@@ -64,7 +64,7 @@ const IntroductionUpdate = ({I_styles, onPage, seq}) => {
             if(imgList.length > 0){
                 if(imgList.join(',').includes('bitcamp-edu-bucket-97')) { 
                     const wrDTO = {...writeDTO, images: imgList.join(',')}; //join(',') ,넣어주기
-                    axios.put(`http://localhost:8080/write/update`, wrDTO)
+                    axios.put(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/write/update`, wrDTO)
                     .then(() => {
                         alert('글 수정이 완료되었습니다.')
                         onPage(0)
@@ -83,10 +83,10 @@ const IntroductionUpdate = ({I_styles, onPage, seq}) => {
                     });
                 }))
                 .then(() => {
-                    axios.post(`http://localhost:8080/storage/upload`, formData)
+                    axios.post(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/storage/upload`, formData)
                          .then(res => {
                                 const wrDTO = {...writeDTO, images: res.data};
-                                axios.put(`http://localhost:8080/write/update`, wrDTO)
+                                axios.put(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/write/update`, wrDTO)
                                     .then(() => {
                                     alert('글 수정이 완료되었습니다.')
                                     onPage(0)
@@ -97,7 +97,7 @@ const IntroductionUpdate = ({I_styles, onPage, seq}) => {
                 })
             }}
             else{
-                    axios.put(`http://localhost:8080/write/update`, writeDTO)
+                    axios.put(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/write/update`, writeDTO)
                          .then(() => {
                          alert('글 수정이 완료되었습니다.')
                          onPage(0)

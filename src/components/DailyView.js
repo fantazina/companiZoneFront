@@ -100,7 +100,7 @@ const DailyView = ({onPage, D_styles ,seq, mainPage}) => {
     }
     
     const onDeleteSubmit = ()=> {
-        axios.delete(`http://localhost:8080/write/delete/${seq}`)
+        axios.delete(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/write/delete/${seq}`)
              .then(res => {
              alert('글이 삭제되었습니다.')
              onPage(0)
@@ -122,7 +122,7 @@ const DailyView = ({onPage, D_styles ,seq, mainPage}) => {
 
     }
     const onCommentSubmit = () => {
-        axios.post(`http://localhost:8080/comment/write`, commentDTO)
+        axios.post(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/comment/write`, commentDTO)
              .then(res => {
                 setCommentDTO({
                     ...commentDTO,
@@ -132,15 +132,15 @@ const DailyView = ({onPage, D_styles ,seq, mainPage}) => {
                     res.data,       
                     ...commentList
                 ]);
-                axios.get(`http://localhost:8080/comment/getTotal/${seq}`)
+                axios.get(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/comment/getTotal/${seq}`)
                 .then(res => setCommentTotal(res.data))
         })
     }
 
     const onCommentDelete = (commentSeq) => {
-        axios.delete(`http://localhost:8080/comment/delete/${commentSeq}`)
+        axios.delete(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/comment/delete/${commentSeq}`)
              .then((res) => {
-                axios.get(`http://localhost:8080/comment/getTotal/${seq}`)
+                axios.get(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/comment/getTotal/${seq}`)
                 .then(res => setCommentTotal(res.data))
 
                 setCommentList(commentList.filter(item => item.commentSeq !== commentSeq))
