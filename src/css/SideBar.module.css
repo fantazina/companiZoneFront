@@ -1,7 +1,7 @@
 .sidebar_button {
     padding-top: 25px;
     width : 185px;
-    height : 625px;
+    height : 605px;
     margin : left;
     text-align: center;
     float : left;
@@ -13,10 +13,9 @@
     margin-top : 20px;
     border-radius: 8px !important;
     cursor: pointer;
-    border : 0;
+    border : none;
     transition: 0.4s;
     font-weight: bold;
-
 }
 .sidebar_button button:hover {
     background-color : cadetblue;

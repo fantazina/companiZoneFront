@@ -12,28 +12,37 @@
 
 /* *************************************** */
 .main_container {
-    width : 1090px;
-    height : 858px;
+    max-width : 1090px;
+    width : 100%;
+    height : 850px;
     margin : 0 auto;
 }
 .header_main {
     border-bottom : 1px solid gray;
     width : 100%;
-    height : 100px;
+    height : 110px;
+}
+.header_img {
+    /* width : 325px; */
+    width : 33%;
+    padding-top : 40px; 
+    padding-left : 20px;
+    object-fit : contain;
 }
 .header_span {
     float : right;
     margin-top : 70px;
-    margin-right : 50px;
-    cursor: pointer;    
+    margin-right : 30px;
+    cursor: pointer;  
+    width : 130px;  
 }
 .header_span2 {
     float : right;
-    margin-top : 50px;
-    margin-right : 30px;    
+    margin-top : 60px;
+    margin-right : 30px;
+    width : 230px;      
 }
 .header_span2 button {
-    display: inline-block;
     border : none;
     width : 70px;
     height : 30px;
@@ -51,27 +60,38 @@
 .main_page {
     float : left;
     border-bottom : 1px solid gray;
-    width : 900px;
+    width : 890px;
     height : 600px;
     overflow: auto;
     overflow-x: hidden;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 /*--------index--------*/
 .main_form {
-    width : 850px;
-    height : 98%;
+    max-width: 890px;
+    width : 100%;
+    height : 100%;
     margin : 0 auto;
+    margin-top : 50px;
 }
 .img_div {
     width : 900px;
     height : 100%;
     margin : 0 auto;
 }
+.img_div img {
+    width : 500px;
+}
 .text {
     width : 370px;
     height : 200px;
     float : right;
+}
+.text span {
+    display: flex;
+}
+.span_img {
+    margin-top : 50px;
 }
 /*--------index--------*/
 .login_page {
@@ -144,11 +164,11 @@
     margin : 10px;
     border : 0;
     border-radius: 8px !important;
-    cursor: pointer;
     font-weight: bold;
     margin-top : 45px;
     cursor: pointer;
     transition: 0.3s;
+    display: inline-block;
 }
 .buttons button:hover {
     background-color : cadetblue;
@@ -159,17 +179,138 @@
     color: red;
     font-size: 14px;
 }
-
-미디어 쿼리
-@media (max-width: 1199px) {
+/*-----------미디어쿼리------------*/
+@media (max-width : 1090px) {
+    .main_container {
+        width : 100%;
+        margin : 0 auto;
+    }
+    .main_form {
+        width : 100%;
+    }
+    .main_form h1 {
+        width : 350px;
+    }
+    .main_page {
+        width: 80%;
+        margin: 0 auto; 
+        align-items: center;
+    }
+    .img_div {
+        width: 100%;
+        float: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        margin: 0 auto;
+    }
+    .main_text {
+        display: flex;
+        flex-direction: column;
+    }
+    .header_span2 {
+        font-size: 13px;
+    }
+    .header_img {
+        width : 200px;
+    }
+}
+ @media (max-width : 765px) {
+    .main_container {
+        width : 100%;
+    }
+    .main_form {
+        width : 100%;
+    }
+    .main_form h1 {
+        width : 300px;
+    }
+    .main_page {
+        width: 100%;
+        margin-left: 112px;
+    }
+    .img_div {
+        width : 100%;
+        height : 100%;
+        margin : 0 auto;
+    }
+    .main_text {
+        display: flex;
+        flex-direction: column;
+    }
+    .header_span2 {
+        font-size: 13px;
+    }
+    .header_img {
+        width : 200px;
+    }
+} 
+/* @media (max-width : 500px) {
+    .main_container {
+        width : 100%;
+    }
+    .main_form h1 {
+        margin : 0 auto;
+        width : 250px;
+        display: flex;
+        flex-direction: column;
+    }
+    .header_span2 {
+        font-size: 13px;
+        margin : -10px 110px 0 0;
+    }
+    .header_img {
+        width : 200px;
+    }
+    .img_div {
+        display: flex;
+        float : none;
+    }
+} */
+@media (max-width : 360px) {
     .main_page {
         width : 100%;
     }
-    .header_span {
-        width : 100%;
-        margin : -3px;
+    .main_form h1 {
+        margin : 0 auto;
+        width : 250px;
+        display: flex;
+        flex-direction: column;
+    }
+    .main_text {
+        display: flex;
+        flex-direction: column;
+    }
+    .header_img {
+        width : 210px;
+        margin-left : -12px;
+        margin : 0 auto;
+    }
+    .img_div {
+        display: flex;
+        float : none;
+    }
+    .img_div img {
+        display: flex;
+        flex-direction: column;
     }
     .header_span2 {
-        width : 100%;
+        margin : -5px 110px 0 0;
+        font-size: 13px;
     }
-}
+    .header_span2 button {
+        width : 65px;
+        height : 25px;
+        font-size: 12px;
+        margin-left : 8px;
+    }
+    .main_page {
+        width : 100%;
+        margin : 0 auto;
+    }
+    .text img {
+        width : 50%;
+        display: flex;
+        flex-direction: column;
+    }
+} 
