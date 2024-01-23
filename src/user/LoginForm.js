@@ -41,7 +41,7 @@ const LoginForm = ({ onPage }) => {
         }
         
         if(sw === 1){
-            axios.post(`http://localhost:8080/user/login`, null, {
+            axios.post(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/user/login`, null, {
                 params : {
                     id : userDTO.id,
                     pwd : userDTO.pwd

@@ -14,7 +14,7 @@ const MyPage = ({onPage}) => {
     const[pwdSend, setPwdSend] = useState('')
     
     const onPwdSubmit = () => {
-        axios.post(`http://localhost:8080/user/checkPwd`, { id: userDTO.id , password : pwdSend })
+        axios.post(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/user/checkPwd`, { id: userDTO.id , password : pwdSend })
              .then(res => setPwdPass(res.data))
           
     }
@@ -69,7 +69,7 @@ const MyPage = ({onPage}) => {
     } 
 
     if(sw === 1){
-        axios.put(`http://localhost:8080/user/update`, userDTO)
+        axios.put(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/user/update`, userDTO)
         .then(
             alert('정보 수정이 완료되었습니다.')
         )

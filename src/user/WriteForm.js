@@ -33,7 +33,7 @@ const WriteForm = ({onPage}) => {
 
     //아이디 중복체크
     const onIsExistId = () => {
-        axios.get(`http://localhost:8080/user/isExistId?id=${ userDTO.id }`)
+        axios.get(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/user/isExistId?id=${ userDTO.id }`)
              .then(res => {
               setIdError(res.data === 'non_exist' ? '사용 가능' : '사용 불가능')
             })
@@ -83,7 +83,7 @@ const WriteForm = ({onPage}) => {
         }
 
         if(sw === 1){
-            axios.post(`http://localhost:8080/user/write`, null, {
+            axios.post(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/user/write`, null, {
                 params : {
                     name : userDTO.name, // name으로 가능,
                     id : userDTO.id,
