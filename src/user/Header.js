@@ -17,7 +17,7 @@ const Header = ({onPage}) => {
     return (
         <div>
             <div className={ styles.header_main }>
-                <img className={ styles.header_img } id='logo' src={ logo } alt='로고' />
+                <img className={ styles.header_img } onClick={ () => onPage(0) } src={ logo } id='logo' alt='로고' />
                     {!userDTO && (
                         <div className={ styles.header_span }>
                             <span onClick={ () => onPage(2) }>로그인</span>

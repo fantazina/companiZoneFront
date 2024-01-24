@@ -21,3 +21,8 @@
     background-color : cadetblue;
     color : whitesmoke;
 }
+@media (max-width : 765px) {
+    .sidebar_button {
+        display: none;
+    }
+}

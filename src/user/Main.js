@@ -25,7 +25,7 @@ const Main = ({ page, onPage }) => {
             </div>
             } */}
             <div className={ styles.main_page } id='mainPage'>
-                { page === 0 && <Index /> }
+                { page === 0 && <Index onPage={ onPage }/> }
                 { page === 1 && <WriteForm onPage={ onPage }/> }
                 { page === 2 && <LoginForm onPage={ onPage }/> }
                 { page === 3 && <IntroductionMain mainPage={ mainPage } mainOnPage={ onPage } />}
