@@ -60,6 +60,10 @@
 @media (max-width : 765px) {
     .sidebar_point {
         display: block;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width : 40px;
     }
     .sidebar2_button {
         display: block;
