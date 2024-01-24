@@ -21,7 +21,49 @@
     background-color : cadetblue;
     color : whitesmoke;
 }
+.sidebar2_button {
+    position: fixed;
+    top: 110px;
+    left: 0;
+    width : 185px;
+    height : 580px;
+    margin : left;
+    text-align: center;
+    display: none;
+    background-color: white;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    opacity: 0.8;
+    box-shadow : 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.sidebar2_button button {
+    width : 150px;
+    height : 50px;
+    margin-top : 20px;
+    border-radius: 8px !important;
+    cursor: pointer;
+    border : none;
+    transition: 0.4s;
+    font-weight: bold;
+}
+.sidebar2_button button:hover {
+    background-color : cadetblue;
+    color : whitesmoke;
+}
+.sidebar_point {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width : 40px;
+}
 @media (max-width : 765px) {
+    .sidebar_point {
+        display: block;
+    }
+    .sidebar2_button {
+        display: block;
+    }
     .sidebar_button {
         display: none;
     }
