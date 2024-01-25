@@ -6,22 +6,26 @@
     height : 500px;
     font-weight: bold;
 }
+.main_writeform p {
+    font-size : 25px;
+    margin : 20px 0 10px 20px;
+    width : 100%;
+}
 ._ {
-    width : 700px;
-    margin-top : 5px;
-    padding-top : 20px;
+    width : 100%;
     box-sizing: border-box;
     border-bottom: 1px solid rgb(233,233,233);
 }
 .write_main {
-    width : 700px;
+    width : 100%;
     height : 500px;
     margin : 0 auto;
+    margin-top: 30px;
     text-align: center;
 }
 .name_start {
     box-sizing: border-box;
-    padding-top : 30px;
+    padding-top : 20px;
 }
 .name_start input {
     background-color : whitesmoke;
@@ -128,9 +132,6 @@
 .label_phone {
     margin-left : 30px;
 }
-.row_div {
-    padding-top : 30px;
-}
 .buttons {
     width : 230px;
     height : 40px;
@@ -157,54 +158,117 @@
     color: red;
     font-size: 14px;
 }
-@media (max-width: 1199px) {
-    .selected_day {
-        display: inline-block;
-    }
-    .main_page {
-        width : 100%;
-    }
-    .information {
-        width : 100%;
-        flex-wrap: wrap;
-    }
-    .main_reservation {
-        width : 100%;
-        padding-top : 20px;
-    }
-    .select_month_day {
-        width : 20%;
-    }
-    .row_div {
-        width: 100%;
-    }
-    .row_div input{
-        width: 40%
-    }
-    .row_day {
-        width: 40%;
-    }
+@media (max-width: 765px) {
     ._ {
         width : 100%;
     }
-    .hr {
-        display: none;
+    .write_main {
+        width : 100%;
+        margin: 0 auto;
+        margin-top: 0px;
+        height: 485px;
     }
-}
-@media (max-width: 754px) {
     .name_start {
         flex-direction: column;
-    }
-    .name_start input{
-        height: 40px;     
-        width: 50%;  
-    }
-    .row_div input{
-        width: 70%
-    }
-    .row_day {
-        margin-top: 30px;
-        float: none;
         width: 100%;
     }
+}
+@media (max-width: 400px) {
+    .write_main {
+        width : 100%;
+        margin-top : 15px;
+        height : 100%;
+    }
+    .name_start {
+        width : 100%;
+        padding-top : 10px;
+        height: 90px;
+    }
+    .name_start label {
+        font-size: 13px;
+        padding : 0;
+        margin-right: 500px;
+    }
+    .name_start input {
+        display: block;
+        width : 30%;
+        height : 29px;
+        margin-left: 80px;
+        margin-top : 10px;
+    }
+    .id {
+        margin : 0 auto;
+        width : 100%;
+    }
+    .id label {
+        font-size: 13px;
+        padding : 0;
+        margin-right: 490px;
+    }
+    .id input{
+        display: block;
+        width : 29%;
+        height : 20px;
+        margin-left: 67px;
+        margin-top : 10px;
+    }
+    .pwd {
+        width : 100%;
+        margin-top: 40px;
+    }
+    .pwd label {
+        font-size: 13px;
+        margin-right: 460px;
+    }
+    .pwd input {
+        width : 60%;
+        display: block;
+        height : 20px;
+        width : 29%;
+        margin-left: 75px;
+        margin-top : 10px;
+    }
+    .pwd_re {
+        width : 100%;
+        margin-top: 30px;
+    }
+    .pwd_re label {
+        font-size: 13px;
+        margin-right: 360px;
+    }
+    .pwd_re input {
+        display: block;
+        width : 29%;
+        height : 20px;
+        margin-left: 110px;
+        margin-top : 10px;
+    }
+    .phone {
+        width : 100%;
+        margin-top: 30px;
+    }    
+    .phone label {
+        font-size: 13px;
+        margin-right: 310px;
+    }    
+    .phone input {
+        display: block;
+        width : 30%;
+        height : 29px;
+        margin-left: 168px;
+        margin-top : 10px;
+    }  
+    .buttons {
+        width : 60%;
+        height : 30px;
+        margin-right: 530px;
+    }
+    .buttons button {
+        width : 65px;
+        height : 25px;
+        margin-top : 15px;
+        margin-bottom : 32px;
+        font-size: 13px;
+    }  
+    
 }

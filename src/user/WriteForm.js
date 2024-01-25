@@ -112,7 +112,7 @@ const WriteForm = ({onPage}) => {
 
     return (
             <div className={ styles.main_writeform}>
-                <p style={{ fontSize : '25px', margin: '10px' }}>회원가입</p>
+                <p>회원가입</p>
 
                 <div className={ styles._ }></div>
 
