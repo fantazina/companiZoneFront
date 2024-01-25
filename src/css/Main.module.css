@@ -98,20 +98,23 @@
 .login_page {
     max-width: 900px;
     width : 100%;
-    height : 500px;
+    height : 450px;
+    margin-top : 150px;
 }
 .login_div {
-    text-align: center;
-    margin-top : 150px;
-    height : 150px;
+    text-align : center;
+    height : 200px;
+    width : 500px;
+    margin : 0 auto;
 }
 .id {
     box-sizing: border-box;
     padding : 6px 14px;
+    display: flex;
     width : 350px;
     height : 30px;
     margin : 25px;
-    margin-left : 20px;
+    margin-left : 70px;
 }
 .id input {
     background-color: whitesmoke;
@@ -129,22 +132,23 @@
 .id label {
     padding-top: 8px;
     font-weight: bold;
+    width : 50px;
 }
 .pwd {
     box-sizing: border-box;
     padding : 6px 14px;
-    width : 350px;
+    display: flex;
+    width : 380px;
     height : 30px;
     margin : 10px;
     padding-top : 20px;
-    margin-left : -10px;
+    margin-left : 40px;
 }
 .pwd input {
     padding : 6px 14px;
     border : none;
-    width : 230px;
+    width : 350px;
     height : 30px;
-    margin-left : 20px;
     border-radius: 8px !important;
     background-color : whitesmoke;
 }
@@ -155,13 +159,13 @@
 .pwd label {
     padding-top: 8px;
     font-weight: bold;
+    width : 150px;
 }
 .buttons {
     width : 230px;
     height : 40px;
     margin : 0 auto;
     text-align: center;
-    margin-top : 50px;
 }
 .buttons button {
     width : 80px;
@@ -170,7 +174,6 @@
     border : 0;
     border-radius: 8px !important;
     font-weight: bold;
-    /* margin-top : 45px; */
     cursor: pointer;
     transition: 0.3s;
     display: inline-block;
@@ -202,7 +205,6 @@
     .main_page {
         width: calc(100% - 190px);
         float : left;
-
     }
     .img_div {
         width: 100%;
@@ -257,15 +259,44 @@
     }
     /*-----------login---------*/
     .login_div {
-        margin-top : 30px;
+        text-align : center;
+        width : 350px;
+        margin : 0 auto;
+    }
+    .login_page {
+        margin-top: 50px;;
+    } 
+    .id {
+        text-align: center;
+        width: 100%;
+        margin : 20px auto;
+        margin-left : 0;
+    }
+    .pwd {
+        text-align: center;
+        width: 100%;
+        margin : 20px auto;
+        margin-left : 0;
+    }
+    .id label{
+        font-size: 14px;
+        width : 100%;
+    }
+    .pwd label{
+        font-size: 14px;
+        width : 100%;
     }
     .id input {
-        width : 35%;
+        margin-right: 50px;
+        margin-left : 0;
     }
     .pwd input {
-        width : 32%;
+        margin-right: 50px;
     }
-}   
+    .buttons {
+        margin-top : -20px auto;
+    }
+}
 
 @media (max-width : 400px) {
     .main_container {
@@ -318,30 +349,22 @@
     }
     /*-----------login---------*/
     .login_div {
-        margin-top: 100px;
+        margin-top: 150px;
+        height : 180px;
     }
     .id {
-        text-align: center;
-        width: 100%;
+        margin-left : 15px;
     }
+    .id input {
+        margin-left : 0;
+    } 
     .pwd {
-        text-align: center;
-        width: 100%;
+        margin-left: 15px;
     }
     .id label{
         font-size: 13px;
     }
     .pwd label{
         font-size: 13px;
-    }
-    .id input {
-        width : 41%;
-        margin-right: 50px;
-    }
-    .pwd input {
-        width : 43%;
-    }
-    .buttons {
-        margin-top : -20px auto;
     }
 } 
