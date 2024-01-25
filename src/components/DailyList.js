@@ -61,8 +61,8 @@ const DailyList = ({ onPage, onSeq, D_styles, pg, onPg, mainOnPage }) => {
 
                     <div style={{clear:'both'}}/>
 
-                    <div className={D_styles.dailyList}>
-                        <div style={{ borderTop : '1px solid gray',borderBottom : '1px solid gray', padding : '5px'}}>
+                    <div className={ D_styles.dailyList }>
+                        <div className={ D_styles.list_ }>
                             <span className={ D_styles.seq }>글번호</span>
                             <span className={ D_styles.title }>제목</span>
                             <span className={ D_styles.id }>작성자</span>

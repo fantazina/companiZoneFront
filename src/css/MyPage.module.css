@@ -1,6 +1,6 @@
 .main_writeform {
-    width: 700px;
     max-width: 900px;
+    width: 100%;
     min-height : 500px;
     margin : 0 auto;
     height : 500px;
@@ -161,58 +161,13 @@
     color: red;
     font-size: 14px;
 }
-@media (max-width: 1199px) {
-    .selected_day {
-        display: inline-block;
-    }
-    .main_page {
-        width : 100%;
-    }
-    .information {
-        width : 100%;
-        flex-wrap: wrap;
-    }
-    .main_reservation {
-        width : 100%;
-        padding-top : 20px;
-    }
-    .select_month_day {
-        width : 20%;
-    }
-    .row_div {
-        width: 100%;
-    }
-    .row_div input{
-        width: 40%
-    }
-    .row_day {
-        width: 40%;
-    }
-    ._ {
-        width : 100%;
-    }
-    .hr {
-        display: none;
-    }
-}
-@media (max-width: 754px) {
-    .name_start {
-        flex-direction: column;
-    }
-    .name_start input{
-        height: 40px;     
-        width: 50%;  
-    }
-    .row_div input{
-        width: 70%
-    }
-    .row_day {
-        margin-top: 30px;
-        float: none;
-        width: 100%;
-    }
-}
 /*------비밀번호 확인버튼------*/
+.main_writeform {
+    width : 100%;
+}
+._ {
+    width : 100%;
+}
 .pwd_check {
     box-sizing: border-box;
     padding : 6px 14px;
@@ -255,4 +210,160 @@
 .pwd_check button:hover {
     background-color : cadetblue;
     color: whitesmoke;
+}
+/*----------------------------*/
+@media (max-width: 765px) {
+    .pwd_check span {
+        margin-left: 50px;
+    }
+    ._ {
+        width : 100%;
+    }
+    .write_main {
+        width : 100%;
+        margin: 0 auto;
+        margin-top: 0px;
+        height: 485px;
+    }
+    .name_start {
+        flex-direction: column;
+        width: 100%;
+    }
+    .buttons button {
+        margin-bottom : 45px;
+    }  
+}
+@media (max-width: 500px) {
+    .pwd_check span {
+        margin-left: 30px;
+    }
+    .pwd_check input {
+        width : 45%;
+    }
+    .pwd_check button {
+        display : block;
+        margin-left: 270px;
+        margin-top: 30px;
+    }
+}
+@media (max-width: 400px) {
+    .pwd_check {
+        width : 100%;
+        margin : 0;
+    }
+    .pwd_check h4 {
+        font-size : 13.5px;
+    }
+    .pwd_check span {
+        font-size: 13px;
+        display : block;
+        margin-left: 55px;
+    }
+    .pwd_check input {
+        width : 60%;
+        margin-left: 50px;
+        margin-top: 15px;
+        height : 29px;
+    }
+    .pwd_check button {
+        margin-top : 25px;
+        margin-left: 200px;
+    }
+    .write_main {
+        width : 100%;
+        margin-top : 15px;
+        height : 100%;
+    }
+    .name_start {
+        width : 100%;
+        padding-top : 10px;
+        height: 90px;
+    }
+    .name_start label {
+        font-size: 13px;
+        padding : 0;
+        margin-right: 500px;
+    }
+    .name_start input {
+        display: block;
+        width : 30%;
+        height : 29px;
+        margin-left: 80px;
+        margin-top : 10px;
+    }
+    .id {
+        margin : 0 auto;
+        width : 100%;
+    }
+    .id label {
+        font-size: 13px;
+        padding : 0;
+        margin-right: 490px;
+    }
+    .id input{
+        display: block;
+        width : 29%;
+        height : 20px;
+        margin-left: 67px;
+        margin-top : 10px;
+    }
+    .pwd {
+        width : 100%;
+        margin-top: 40px;
+    }
+    .pwd label {
+        font-size: 13px;
+        margin-right: 460px;
+    }
+    .pwd input {
+        width : 60%;
+        display: block;
+        height : 20px;
+        width : 29%;
+        margin-left: 75px;
+        margin-top : 10px;
+    }
+    .pwd_re {
+        width : 100%;
+        margin-top: 30px;
+    }
+    .pwd_re label {
+        font-size: 13px;
+        margin-right: 360px;
+    }
+    .pwd_re input {
+        display: block;
+        width : 29%;
+        height : 20px;
+        margin-left: 110px;
+        margin-top : 10px;
+    }
+    .phone {
+        width : 100%;
+        margin-top: 30px;
+    }    
+    .phone label {
+        font-size: 13px;
+        margin-right: 310px;
+    }    
+    .phone input {
+        display: block;
+        width : 30%;
+        height : 29px;
+        margin-left: 168px;
+        margin-top : 10px;
+    }
+    .buttons {
+        width : 60%;
+        height : 30px;
+        margin-left : -15px;
+    }
+    .buttons button {
+        width : 70px;
+        height : 29px;
+        margin-top : 15px;
+        margin-bottom : 50px;
+        font-size: 13px;
+        text-align: center;
+    }  
 }

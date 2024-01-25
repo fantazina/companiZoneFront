@@ -63,7 +63,7 @@ const FriendList = ({ onPage, onSeq, F_styles, pg, onPg, mainOnPage }) => {
                     <div style={{clear:'both'}}/>
 
                     <div className={F_styles.friendList}>
-                        <div style={{ borderTop : '1px solid gray',borderBottom : '1px solid gray', padding : '5px'}}>
+                        <div className={ F_styles.list_ }>
                             <span className={ F_styles.seq }>글번호</span>
                             <span className={ F_styles.title }>제목</span>
                             <span className={ F_styles.id }>작성자</span>

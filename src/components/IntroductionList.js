@@ -63,7 +63,7 @@ const IntroductionList = ({ onPage, onSeq, I_styles, pg, onPg, mainOnPage }) => 
                     <div style={{clear:'both'}}/>
 
                     <div className={I_styles.introList}>
-                        <div style={{ borderTop : '1px solid gray',borderBottom : '1px solid gray', padding : '5px'}}>
+                        <div className={ I_styles.list_ }>
                             <span className={ I_styles.seq }>글번호</span>
                             <span className={ I_styles.title }>제목</span>
                             <span className={ I_styles.id }>작성자</span>

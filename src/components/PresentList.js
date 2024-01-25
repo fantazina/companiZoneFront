@@ -63,7 +63,7 @@ const PresentList = ({ onPage, onSeq, P_styles, pg, onPg, mainOnPage }) => {
                     <div style={{clear:'both'}}/>
 
                     <div className={P_styles.presentList}>
-                        <div style={{ borderTop : '1px solid gray',borderBottom : '1px solid gray', padding : '5px'}}>
+                        <div className={ P_styles.list_ }>
                             <span className={ P_styles.seq }>글번호</span>
                             <span className={ P_styles.title }>제목</span>
                             <span className={ P_styles.id }>작성자</span>

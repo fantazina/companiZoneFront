@@ -1,6 +1,6 @@
 .main_writeform {
-    width: 700px;
     max-width: 900px;
+    width: 100%;
     min-height : 500px;
     margin: 0 auto;
     height : 500px;
@@ -271,5 +271,4 @@
         font-size: 13px;
         text-align: center;
     }  
-    
 }

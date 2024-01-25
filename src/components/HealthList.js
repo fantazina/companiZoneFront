@@ -63,7 +63,7 @@ const HealthList = ({ onPage, onSeq, H_styles, pg, onPg, mainOnPage }) => {
                     <div style={{clear:'both'}}/>
 
                     <div className={H_styles.healthList}>
-                        <div style={{ borderTop : '1px solid gray',borderBottom : '1px solid gray', padding : '5px'}}>
+                        <div className={ H_styles.list_ }>
                             <span className={ H_styles.seq }>글번호</span>
                             <span className={ H_styles.title }>제목</span>
                             <span className={ H_styles.id }>작성자</span>

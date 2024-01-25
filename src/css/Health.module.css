@@ -117,25 +117,30 @@
     width : 98%;
     height : 481px;
 }
+.list_ {
+    border-top : 1px solid gray;
+    border-bottom : 1px solid gray;
+    padding : 5px;
+}
 .seq {
     display : inline-block;
-    width : 10%;
+    width : 12%;
     text-align : center;
 }
 .title {
     display : inline-block;
-    width : 54%;
+    width : 44%;
     text-align : center;
     cursor : pointer;
 }
 .id {
     display : inline-block;
-    width : 10%;
+    width : 12%;
     text-align : center;
 }
 .logTime {
     display : inline-block;
-    width : 14%;
+    width : 20%;
     text-align : center;
 }
 .hit {
@@ -350,4 +355,49 @@
 .commentDel:hover {
     background-color : cadetblue;
     color : whitesmoke;
+}
+@media(max-width : 765px) {
+    .healthList {
+        width : 100%;            
+        margin-bottom : 15px;
+    }
+    .upload_main h2 {
+        margin-left : 10px;
+    }
+    .search button {
+        margin : 0 auto;
+        margin-top : -50px;
+        margin-right : 20px;
+        font-size : 13px;
+        width : 75px;
+        height : 33px;
+    }
+}
+@media(max-width : 500px) {
+    .upload_main {
+        height : 760px;
+    }
+    .healthList {
+        font-size: 14px;
+    } 
+    .search button {
+        margin : 0 auto;
+        margin-top : -50px;
+        margin-right : 20px;
+        width : 70px;
+        height : 30px;
+    }
+}
+@media(max-width : 375px) {
+    .healthList {
+        font-size: 13px;
+    }  
+    .search button {
+        margin : 0 auto;
+        margin-top : -80px;
+        margin-right : 20px;
+        font-size : 13px;
+        width : 75px;
+        height : 33px;
+    }
 }

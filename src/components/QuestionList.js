@@ -63,7 +63,7 @@ const QuestionList = ({ onPage, onSeq, Q_styles, pg, onPg, mainOnPage }) => {
                     <div style={{clear:'both'}}/>
 
                     <div className={Q_styles.quesList}>
-                        <div style={{ borderTop : '1px solid gray',borderBottom : '1px solid gray', padding : '5px'}}>
+                        <div className={ Q_styles.list_ }>
                             <span className={ Q_styles.seq }>글번호</span>
                             <span className={ Q_styles.title }>제목</span>
                             <span className={ Q_styles.id }>작성자</span>
