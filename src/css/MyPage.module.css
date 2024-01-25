@@ -120,7 +120,7 @@
 .phone input {
     background-color : whitesmoke;
     border : none;
-    width : 31%;
+    width : 30%;
     height : 40px;
     border-radius: 8px !important;
     margin-left : 20px;
@@ -131,9 +131,6 @@
 }
 .label_phone {
     margin-left : 30px;
-}
-.row_div {
-    padding-top : 30px;
 }
 .buttons {
     width : 230px;
@@ -247,12 +244,14 @@
     }
 }
 @media (max-width: 400px) {
+    /*--------비밀번호체크---------*/
     .pwd_check {
         width : 100%;
         margin : 0;
     }
     .pwd_check h4 {
         font-size : 13.5px;
+        margin-left : 15px;
     }
     .pwd_check span {
         font-size: 13px;
@@ -269,9 +268,11 @@
         margin-top : 25px;
         margin-left: 200px;
     }
+    /*-----------------------*/
     .write_main {
         width : 100%;
         margin-top : 15px;
+        margin-left: 15px;
         height : 100%;
     }
     .name_start {
@@ -281,12 +282,12 @@
     }
     .name_start label {
         font-size: 13px;
+        margin-right : 160px;
         padding : 0;
-        margin-right: 500px;
     }
     .name_start input {
         display: block;
-        width : 30%;
+        width : 45%;
         height : 29px;
         margin-left: 80px;
         margin-top : 10px;
@@ -297,12 +298,12 @@
     }
     .id label {
         font-size: 13px;
+        margin-right : 160px;
         padding : 0;
-        margin-right: 490px;
     }
     .id input{
         display: block;
-        width : 29%;
+        width : 45%;
         height : 20px;
         margin-left: 67px;
         margin-top : 10px;
@@ -313,13 +314,12 @@
     }
     .pwd label {
         font-size: 13px;
-        margin-right: 460px;
+        margin-right : 140px;
     }
     .pwd input {
-        width : 60%;
         display: block;
         height : 20px;
-        width : 29%;
+        width : 45%;
         margin-left: 75px;
         margin-top : 10px;
     }
@@ -329,11 +329,11 @@
     }
     .pwd_re label {
         font-size: 13px;
-        margin-right: 360px;
+        margin-right : 40px;
     }
     .pwd_re input {
         display: block;
-        width : 29%;
+        width : 45%;
         height : 20px;
         margin-left: 110px;
         margin-top : 10px;
@@ -344,26 +344,25 @@
     }    
     .phone label {
         font-size: 13px;
-        margin-right: 310px;
+        margin-right : -10px;
     }    
     .phone input {
         display: block;
-        width : 30%;
+        width : 45%;
         height : 29px;
         margin-left: 168px;
         margin-top : 10px;
-    }
+    }  
     .buttons {
         width : 60%;
         height : 30px;
-        margin-left : -15px;
     }
     .buttons button {
         width : 70px;
         height : 29px;
         margin-top : 15px;
-        margin-bottom : 50px;
+        margin-bottom : 32px;
         font-size: 13px;
         text-align: center;
-    }  
+    }   
 }

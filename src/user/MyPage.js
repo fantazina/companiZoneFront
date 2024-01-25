@@ -119,7 +119,7 @@ const MyPage = ({onPage}) => {
 
                     <div className={ M_styles.pwd_re }>
                         <label htmlfor='pwd_re'>비밀번호 확인</label>
-                        <input placeholder='동일한 비밀번호를 입력해주세요.' name='pwd_re' type='password' value={ userDTO.pwd_re } onChange={ onInputChange } />
+                        <input placeholder='동일한 비밀번호 입력' name='pwd_re' type='password' value={ userDTO.pwd_re } onChange={ onInputChange } />
                         <div className={ M_styles.check }>{pwd_reError}</div>
                     </div>
 
