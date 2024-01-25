@@ -261,7 +261,7 @@
     .buttons {
         width : 60%;
         height : 30px;
-        margin-right: 530px;
+        /* margin-right: 530px; */
     }
     .buttons button {
         width : 65px;
@@ -269,6 +269,7 @@
         margin-top : 15px;
         margin-bottom : 32px;
         font-size: 13px;
+        text-align: center;
     }  
     
 }
