@@ -249,11 +249,9 @@
         width : 100%;
     }
     .header_span {
-        font-size: 14px;
         margin : 13px 1px 0 0;
     }
     .header_span2 {
-        font-size: 14px;
         margin : -3px 1px 0 0;
     }
     .header_span2 button {
@@ -346,10 +344,25 @@
     .id {
         margin-left : 15px;
     }
+    .id label {
+        font-size : 13px;
+    }
     .id input {
         margin-left : 0;
+        height : 20px;
     } 
     .pwd {
         margin-left: 15px;
+    }
+    .pwd label {
+        font-size : 13px;
+    }
+    .pwd input {
+        height : 20px;
+    }
+    .buttons button {
+        font-size: 13px;
+        width : 65px;
+        height : 28px;
     }
 } 

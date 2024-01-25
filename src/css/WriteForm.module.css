@@ -261,11 +261,11 @@
     .buttons {
         width : 60%;
         height : 30px;
-        /* margin-right: 530px; */
+        margin-left : -5px;
     }
     .buttons button {
-        width : 65px;
-        height : 25px;
+        width : 67px;
+        height : 27px;
         margin-top : 15px;
         margin-bottom : 32px;
         font-size: 13px;
