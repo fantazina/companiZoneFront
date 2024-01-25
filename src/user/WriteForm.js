@@ -137,14 +137,14 @@ const WriteForm = ({onPage}) => {
 
                         <div className={ styles.pwd_re }>
                             <label htmlfor='pwd_re'>비밀번호 확인</label>
-                            <input placeholder='동일한 비밀번호를 입력해주세요.' name='pwd_re' type='password' value={ userDTO.pwd_re } onChange={ onInputChange } />
+                            <input placeholder='동일한 비밀번호 입력' name='pwd_re' type='password' value={ userDTO.pwd_re } onChange={ onInputChange } />
                             <div className={styles.check}>{pwd_reError}</div>
                         </div>
 
                         
                         <div className={ styles.phone }>
                             <label className={ styles.label_phone }>휴대전화 번호</label>
-                            <input placeholder='하이픈(-)을 빼고 입력해주세요.' type='tel' name='tel'
+                            <input placeholder='숫자만 입력해주세요.' type='tel' name='tel'
                                    value={ userDTO.tel } onChange={ onInputChange } style={{ paddingLeft : '10px' }} />
                             <div className={styles.check}>{telError}</div>
                         </div>

@@ -388,16 +388,13 @@
         height : 30px;
     }
 }
-@media(max-width : 375px) {
+@media(max-width : 400px) {
     .eventList {
         font-size: 13px;
     }  
     .search button {
-        margin : 0 auto;
         margin-top : -80px;
-        margin-right : 20px;
         font-size : 13px;
-        width : 75px;
-        height : 33px;
+
     }
 }
