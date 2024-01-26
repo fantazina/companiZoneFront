@@ -96,7 +96,7 @@ const QuestionWrite = ({onPage, Q_styles, userDTO, isLoggedIn}) => {
     }
 
     return (
-        <div>
+        <div className={ Q_styles.write_main }>
             { writeDTO.select }
             <h2 style={{ marginLeft : '20px' }}>글쓰기</h2>
                 <div className={ Q_styles.content }>

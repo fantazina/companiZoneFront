@@ -98,7 +98,7 @@ const HealthWrite = ({onPage, H_styles, userDTO, isLoggedIn}) => {
     }
 
     return (
-        <div>
+        <div className={ H_styles.write_main }>
             { writeDTO.select }
             <h2 style={{ marginLeft : '20px' }}>글쓰기</h2>
                 <div className={ H_styles.content }>

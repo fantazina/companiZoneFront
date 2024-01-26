@@ -97,7 +97,7 @@ const EventWrite = ({onPage, E_styles, userDTO, isLoggedIn}) => {
     }
 
     return (
-        <div>
+        <div className={ E_styles.write_main }>
             { writeDTO.select }
             <h2 style={{ marginLeft : '20px' }}>글쓰기</h2>
                 <div className={ E_styles.content }>

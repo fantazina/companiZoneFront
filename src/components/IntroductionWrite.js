@@ -98,7 +98,7 @@ const IntroductionWrite = ({onPage, I_styles, userDTO, isLoggedIn}) => {
     }
 
     return (
-        <div>
+        <div className={ I_styles.write_main }>
             { writeDTO.select }
             <h2 style={{ marginLeft : '20px' }}>글쓰기</h2>
                 <div className={ I_styles.content }>

@@ -153,7 +153,7 @@ const IntroductionUpdate = ({I_styles, onPage, seq}) => {
                                 }
                             </span>
                             
-                            <img id='camera' src={ camera } alt='카메라' onClick={ onCamera } style={{ width: 100, height:100, borderRadius:20 }} />
+                            <img id='camera' src={ camera } alt='카메라' onClick={ onCamera } className={ I_styles.img_camera } />
                             <input type='file' name='img[]' multiple='multiple' ref={ imgRef } onChange={ onImgInput } style={{ visibility: 'hidden' }} />
                         
                         </div>

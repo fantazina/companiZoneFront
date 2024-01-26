@@ -97,7 +97,7 @@ const FriendWrite = ({onPage, F_styles, userDTO, isLoggedIn}) => {
     }
 
     return (
-        <div>
+        <div className={ F_styles.write_main }>
             { writeDTO.select }
             <h2 style={{ marginLeft : '20px' }}>글쓰기</h2>
                 <div className={ F_styles.content }>

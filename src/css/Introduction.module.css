@@ -1,17 +1,16 @@
-.upload_main {
+.write_main {
     max-width: 890px;
-    width : 100%;
     height : 700px;
     margin : 0 auto;
+    width : 100%;
 }
-.subject {
-    border : 1px solid red;
-    width : 700px;
-    height : 500px;
+.write_main h2 {
+    width : 150px;
 }
- .content {
+.content {
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-    width : 800px;
+    max-width : 800px;
+    width : 100%;
     height : 700px;
     padding : 20px;
     margin-left : 20px;
@@ -22,7 +21,7 @@
     text-align : center;
 }
 .title_div {
-    width : 900px;
+    width : 100%;
     height : 50px;
     display : flex;
     margin-left : 30px;
@@ -44,6 +43,7 @@
     margin-top : 6px;
 }
 .select_div {
+    width : 100%;
     display : flex;
 }
 .select_div select {
@@ -66,7 +66,7 @@
     background-color : whitesmoke;
     border-radius : 8px !important;
     cursor : pointer;
-    margin : 2.8px 0px 0 12px;
+    margin : 2.8px 0px 0 15px;
     transition : 0.4s;
     font-weight : bold;
 } 
@@ -80,12 +80,12 @@
     font-size : 14px;
 }
 .text_img {
-    width : 890px;
+    width : 100%;
     height : 550px;
     padding-top : 20px;
 }
 .textarea {
-    width : 796px;
+    width : 99%;
     height : 500px;
     resize : none;
     outline : none;
@@ -113,6 +113,12 @@
     cursor : pointer; 
 }
 /*--------------list css--------------*/
+.upload_main {
+    max-width: 890px;
+    width : 100%;
+    height : 700px;
+    margin : 0 auto;
+}
 .introList {
     width : 98%;
     height : 481px;
@@ -195,7 +201,8 @@
 }
 /*--------------view css--------------*/
 .view_main {
-    width : 900px;
+    max-width : 900px;
+    width : 100%;
     height : 100%;
     margin : 0 auto;
 }.top_div {
@@ -204,15 +211,15 @@
 }
 .view_title {
     margin : 10px 0 0 2%;
-    width : 73%;
+    width : 50%;
     float : left;
 }
 .id_list{
-    /*width: 20%;*/
-    padding : 15px 30px 0 0;
+    padding : 18px 30px 0 0;
     float : right;
 }
 .view_content {
+    width : 100%;
     height : 100%;
 }
 .view_text {
@@ -245,11 +252,13 @@
     border-radius : 10px;
     object-fit : cover;
 }
-/* //////////////////////////// */
 /*-------------수정삭제 벝은-------------*/
 .up_button {
     text-align : right;
-    padding-right : 20px;
+    width : 200px;
+    margin-top : -40px;
+    margin-left: 40px;
+    float : right;
 }
 .up_button button {
     display : inline-block;
@@ -268,6 +277,9 @@
     color : whitesmoke;
 }
 /*--------------------------*/
+.back {
+    width :20%;
+}
 .back button {
     display : inline-block;
     border : none;
@@ -293,7 +305,6 @@
     padding-top : 5px;
     padding-bottom : 5px;
 }
-/*-------------------------------*/
 /*--------------댓글--------------*/
 .comment {
     margin : 0 auto;
@@ -319,7 +330,8 @@
 }
 .comment_text input {
     height : 55px;
-    width : 700px;
+    max-width : 700px;
+    width : 100%;
     border-radius : 8px !important;
     border : 1px solid darkgray;
 }
@@ -355,7 +367,68 @@
 .commentDel:hover {
     background-color : cadetblue;
     color : whitesmoke;
-}@media(max-width : 765px) {
+}
+@media(max-width : 1100px) {
+    /*---------글쓰기----------*/
+    .write_main {
+        width : 100%;
+    }
+    .content {
+        width : 90%;
+        margin: 0 auto;
+    }
+    .img_div {
+        width : 98.5%;
+    }
+    .textarea {
+        width : 99%;
+    }
+    .title_div {
+        margin-left : 10px; 
+    }
+    .title_div p {
+        margin-top : 0;
+    }
+    .title_div input {
+        margin-left : 10px; 
+        width : 90%;
+    }
+    .title_sel {
+        width : 100%;
+    }
+    .select_div {
+        width : 100%;
+    }
+    .select_div select {
+        width : 20%;
+        font-size: 12px;
+    }
+    .button {
+        position: absolute;
+        margin-top: -70px;
+        right: 10px;
+        width : 200px;
+        margin-left: 10px;
+    }
+    .button button {
+        width : 60px;
+        height : 30px;
+        margin-left: 15px;
+        display: inline-block;
+    }
+    /*-----------뷰-----------*/
+    .up_button {   
+        margin-top: -40px;
+    }
+    .comment_text input {
+        width : 80%;
+    }
+    .view_img {
+        width : 88%;
+    }
+}
+@media(max-width : 765px) {
+    /*-----------리스트-----------*/
     .introList {
         width : 100%;            
         margin-bottom : 15px;
@@ -370,6 +443,38 @@
         font-size : 13px;
         width : 75px;
         height : 33px;
+    }
+    /*------------view-----------*/
+    .back button {
+        font-size: 13px;
+        width : 50px;
+        height : 28px;
+    }
+    .up_button {   
+        margin-top: 0;
+        margin-right : 10px;
+        margin-left: 0;
+    }
+    .up_button button {
+        font-size: 13px;
+        width : 50px;
+        height : 28px;
+    }
+    .id_list {
+        padding : 0;
+        margin-top: -65px;
+        margin-right: 20px;
+    }
+    .view_img {
+        width : 100%;
+        margin-left : 0;
+        margin-right : 0;
+    }
+    .comment_text button {
+        font-size: 13px;
+        width : 50px;
+        height : 28px;
+        margin-left: 10px;
     }
 }
 @media(max-width : 500px) {
@@ -386,13 +491,31 @@
         width : 70px;
         height : 30px;
     }
+    .up_button {   
+        margin-top : -40px;
+        margin-right : 10px;
+        margin-left: 0;
+    }
+    .id_list {
+        padding : 0;
+        margin-top : -70px;
+        margin-right : 20px;
+    }
 }
 @media(max-width : 400px) {
     .introList {
         font-size: 13px;
     }  
     .search button {
-        font-size : 13px;
         margin-top : -80px;
+        font-size : 13px;
+    }
+    .button {
+        margin-right: -20px;
+    }
+    .button button {
+        width : 45px;
+        height : 28px;
+        margin-left: 15px;
     }
 }
