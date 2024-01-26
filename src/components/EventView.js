@@ -202,8 +202,6 @@ const EventView = ({onPage, E_styles ,seq, mainPage}) => {
                                         <p>{ getToday(item.logTime) }</p>
                                     </div> 
                             )}
-                                                 
-                        { loading && <h2 style={{textAlign:'center'}}>로딩중</h2>}
                         <br/>
                     
                 </div>}

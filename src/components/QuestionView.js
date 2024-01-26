@@ -166,7 +166,7 @@ const QuestionView = ({ onPage, Q_styles, seq, mainPage }) => {
                             {
                                 imgList.map((item, index) => 
                                     <img key={index} style={{ objectFit : 'cover', width : '350px', display: 'inline-block' }} 
-                                        src={item} onClick={ () => onModal(item) } alt='사진'/>)
+                                        src={item} onClick={ () => onModal(item) } alt='사진' />)
                             }
                         </div>
                         
@@ -193,8 +193,6 @@ const QuestionView = ({ onPage, Q_styles, seq, mainPage }) => {
                                         <p>{ getToday(item.logTime) }</p>
                                     </div> 
                             )}
-                                                 
-                        { loading && <h2 style={{textAlign:'center'}}>로딩중</h2>}
                         <br/>
                     
                 </div>}

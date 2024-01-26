@@ -168,7 +168,9 @@ const DailyView = ({onPage, D_styles ,seq, mainPage}) => {
                         </div>
 
                         <div className={ D_styles.view_content }>
-                            <div className={ D_styles.view_text }>{ writeDTO.content }</div>
+                            <div className={D_styles.view_text}>
+                                {writeDTO.content}
+                            </div>
                         </div>
 
                         <div className={ D_styles.view_img}>
@@ -202,11 +204,7 @@ const DailyView = ({onPage, D_styles ,seq, mainPage}) => {
                                         <p>{ getToday(item.logTime) }</p>
                                     </div> 
                             )}
-                                                 
-                        { loading && <h2 style={{textAlign:'center'}}>로딩중</h2> }
-
                         <br/>
-                    
                 </div>}
             </div>
 
