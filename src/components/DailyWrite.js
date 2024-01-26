@@ -98,7 +98,7 @@ const DailyWrite = ({onPage, D_styles}) => {
     }
 
     return (
-        <div>
+        <div className={ D_styles.write_main }>
             {writeDTO.select}
             <h2 style={{ marginLeft : '20px' }}>글쓰기</h2>
                 <div className={ D_styles.content }>
