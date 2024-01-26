@@ -201,7 +201,8 @@
 }
 /*--------------view css--------------*/
 .view_main {
-    width : 900px;
+    max-width : 900px;
+    width : 100%;
     height : 100%;
     margin : 0 auto;
 }.top_div {
@@ -210,15 +211,15 @@
 }
 .view_title {
     margin : 10px 0 0 2%;
-    width : 73%;
+    width : 50%;
     float : left;
 }
 .id_list{
-    /*width: 20%;*/
-    padding : 15px 30px 0 0;
+    padding : 18px 30px 0 0;
     float : right;
 }
 .view_content {
+    width : 100%;
     height : 100%;
 }
 .view_text {
@@ -254,7 +255,10 @@
 /*-------------수정삭제 벝은-------------*/
 .up_button {
     text-align : right;
-    padding-right : 20px;
+    width : 200px;
+    margin-top : -40px;
+    margin-left: 40px;
+    float : right;
 }
 .up_button button {
     display : inline-block;
@@ -273,6 +277,9 @@
     color : whitesmoke;
 }
 /*--------------------------*/
+.back {
+    width :20%;
+}
 .back button {
     display : inline-block;
     border : none;
@@ -323,7 +330,8 @@
 }
 .comment_text input {
     height : 55px;
-    width : 700px;
+    max-width : 700px;
+    width : 100%;
     border-radius : 8px !important;
     border : 1px solid darkgray;
 }
@@ -409,6 +417,16 @@
         margin-left: 15px;
         display: inline-block;
     }
+    /*-----------뷰-----------*/
+    .up_button {   
+        margin-top: -40px;
+    }
+    .comment_text input {
+        width : 80%;
+    }
+    .view_img {
+        width : 88%;
+    }
 }
 @media(max-width : 765px) {
     /*-----------리스트-----------*/
@@ -427,6 +445,38 @@
         width : 75px;
         height : 33px;
     }
+    /*------------view-----------*/
+    .back button {
+        font-size: 13px;
+        width : 50px;
+        height : 28px;
+    }
+    .up_button {   
+        margin-top: 0;
+        margin-right : 10px;
+        margin-left: 0;
+    }
+    .up_button button {
+        font-size: 13px;
+        width : 50px;
+        height : 28px;
+    }
+    .id_list {
+        padding : 0;
+        margin-top: -65px;
+        margin-right: 20px;
+    }
+    .view_img {
+        width : 100%;
+        margin-left : 0;
+        margin-right : 0;
+    }
+    .comment_text button {
+        font-size: 13px;
+        width : 50px;
+        height : 28px;
+        margin-left: 10px;
+    }
 }
 @media(max-width : 500px) {
     .upload_main {
@@ -441,6 +491,16 @@
         margin-right : 20px;
         width : 70px;
         height : 30px;
+    }
+    .up_button {   
+        margin-top : -40px;
+        margin-right : 10px;
+        margin-left: 0;
+    }
+    .id_list {
+        padding : 0;
+        margin-top : -70px;
+        margin-right : 20px;
     }
 }
 @media(max-width : 400px) {

@@ -1,14 +1,4 @@
-.upload_main {
-    max-width: 890px;
-    width : 100%;
-    height : 700px;
-    margin : 0 auto;
-}
-.subject {
-    border : 1px solid red;
-    width : 700px;
-    height : 500px;
-}
+
  .content {
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
     width : 800px;
@@ -356,7 +346,58 @@
     background-color : cadetblue;
     color : whitesmoke;
 }
+@media(max-width : 1100px) {
+    /*---------글쓰기----------*/
+    .write_main {
+        width : 100%;
+    }
+    .content {
+        width : 90%;
+        margin: 0 auto;
+    }
+    .img_div {
+        width : 98.5%;
+    }
+    .textarea {
+        width : 99%;
+    }
+    .title_div {
+        margin-left : 10px; 
+        font-size: 13px;
+    }
+    .title_div p {
+        margin-top : 0;
+    }
+    .title_div input {
+        margin-left : 10px; 
+        width : 90%;
+    }
+    .title_sel {
+        width : 100%;
+    }
+    .select_div {
+        width : 100%;
+    }
+    .select_div select {
+        width : 20%;
+        font-size: 12px;
+    }
+    .button {
+        position: absolute;
+        margin-top: -70px;
+        right: 10px;
+        width : 200px;
+        margin-left: 10px;
+    }
+    .button button {
+        width : 60px;
+        height : 30px;
+        margin-left: 15px;
+        display: inline-block;
+    }
+}
 @media(max-width : 765px) {
+    /*-----------리스트-----------*/
     .eventList {
         width : 100%;            
         margin-bottom : 15px;
@@ -395,6 +436,13 @@
     .search button {
         margin-top : -80px;
         font-size : 13px;
-
+    }
+    .button {
+        margin-right: -20px;
+    }
+    .button button {
+        width : 45px;
+        height : 28px;
+        margin-left: 15px;
     }
 }
