@@ -97,8 +97,8 @@ const WriteForm = ({onPage}) => {
                 onPage(0)
                 
                 )
-            .catch(error => { console.log(error) 
-                
+            .catch(error => {
+                alert('회원가입에 실패하였습니다.')
             })
           }
     }

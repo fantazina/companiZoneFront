@@ -28,7 +28,7 @@
 .name_start input {
     background-color : whitesmoke;
     border : none;
-    width : 30%;
+    width : 33%;
     height : 40px;
     border-radius : 8px !important;
     margin-left : 20px;
@@ -81,7 +81,7 @@
     background-color: whitesmoke;
     padding : 6px 14px;
     border : none;
-    width : 30%;
+    width : 31%;
     height : 30px;
     margin-left : 20px;
     border-radius: 8px !important;
@@ -121,7 +121,7 @@
 .phone input {
     background-color : whitesmoke;
     border : none;
-    width : 30%;
+    width : 29%;
     height : 40px;
     border-radius: 8px !important;
     margin-left : 20px;
