@@ -122,7 +122,6 @@ const QuestionUpdate = ({Q_styles, onPage, seq}) => {
                                     <option value='소/말/돼지'>소/말/돼지</option>
                                     <option value='소동물'>소동물</option>
                                     <option value='조류'>조류</option>
-                                    <option value='조류'>조류</option>
                                     <option value='어류'>어류</option>
                                     <option value='파충류'>파충류</option>
                                     <option value='양서류'>양서류</option>
