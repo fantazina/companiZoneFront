@@ -92,10 +92,11 @@ const WriteForm = ({onPage}) => {
                 }
             }).then(
                 alert('회원가입을 축하합니다.')
-            ).then(
+                )
+                .then(
                 onPage(0)
-
-            )
+                
+                )
             .catch(error => {  
                 alert('회원가입에 실패하였습니다.')
 
