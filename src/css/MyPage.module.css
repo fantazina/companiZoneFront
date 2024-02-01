@@ -22,12 +22,13 @@
 .name_start {
     box-sizing: border-box;
     border-radius : 8px !important;
-    padding-top : 30px;
+    padding : 6px 14px;
+    padding-top : 24px;
 }
 .name_start input {
     background-color : whitesmoke;
     border : none;
-    width : 33%;
+    width : 30%;
     height : 40px;
     border-radius : 8px !important;
     margin-left : 20px;
@@ -80,7 +81,7 @@
     background-color: whitesmoke;
     padding : 6px 14px;
     border : none;
-    width : 31%;
+    width : 30%;
     height : 30px;
     margin-left : 20px;
     border-radius: 8px !important;

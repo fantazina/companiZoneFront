@@ -330,7 +330,7 @@
     padding-top : 10px;
 }
 .comment_text input {
-    height : 55px;
+    height : 100%;
     max-width : 700px;
     width : 100%;
     border-radius : 8px !important;

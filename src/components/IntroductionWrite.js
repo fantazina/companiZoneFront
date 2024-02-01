@@ -61,7 +61,7 @@ const IntroductionWrite = ({onPage, I_styles, userDTO, isLoggedIn}) => {
             /* 이미지가 있을 경우 이미지 업로드 후 글 업로드 */
             if(imgList.length > 0){
                 const formData = new FormData();
-                Promise.all(imgList.filter(imgs => !imgs.includes('bitcamp-edu-bucket-97')).map((item, index) => {
+                Promise.all(imgList.filter(imgs => !imgs.includes('zinabucket')).map((item, index) => {
                     return fetch(item)
                     .then(response => response.blob())
                     .then(blob => {

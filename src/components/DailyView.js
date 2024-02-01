@@ -1,5 +1,11 @@
 import axios from 'axios';
 import React, { useCallback, useEffect, useState } from 'react';
+import kong from '../img/kong2.jpg';
+import kong2 from '../img/kong1.jpg';
+import kong3 from '../img/kong3.jpg';
+import kong4 from '../img/kong4.jpg';
+
+
 
 const DailyView = ({onPage, D_styles ,seq, mainPage}) => {
 
@@ -177,7 +183,7 @@ const DailyView = ({onPage, D_styles ,seq, mainPage}) => {
                             {
                                 imgList.map((item, index) => 
                                     <img key={index} style={{ objectFit : 'cover', width : '350px', display: 'inline-block' }} 
-                                        src={item} onClick={ () => onModal(item) } alt='사진' />)
+                                        src={item} onClick={ () => onModal(item) } onError={ kong.jpg } alt='사진' />)
                             }
                         </div>
                         
