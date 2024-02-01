@@ -1,11 +1,6 @@
 import axios from 'axios';
 import React, { useCallback, useEffect, useState } from 'react';
 import kong from '../img/kong2.jpg';
-import kong2 from '../img/kong1.jpg';
-import kong3 from '../img/kong3.jpg';
-import kong4 from '../img/kong4.jpg';
-
-
 
 const DailyView = ({onPage, D_styles ,seq, mainPage}) => {
 

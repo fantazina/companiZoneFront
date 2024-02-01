@@ -62,7 +62,6 @@ const DailyUpdate = ({D_styles, onPage, seq}) => {
         if(sw === 1){ 
             /* 이미지가 있을 경우 이미지 업로드 후 글 업로드 */
             if(imgList.length > 0){
-                alert(imgList.join(',').includes('zinabucket'))
                 if(imgList.join(',').includes('zinabucket')) { 
                     const wrDTO = {...writeDTO, images: imgList.join(',')}; //join(',') ,넣어주기
                     axios.put(`https://port-0-companizoneback-ll53u2blrj4us1b.sel5.cloudtype.app/write/update`, wrDTO)
