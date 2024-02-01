@@ -75,7 +75,7 @@ const DailyList = ({ onPage, onSeq, D_styles, pg, onPg, mainOnPage }) => {
                                 list.map((item, index) => 
                                     <div onClick={ () => onView(item.writeSeq) } className={ D_styles.list }>
                                         <span className={ D_styles.seq }>{item.writeSeq}</span>
-                                        <span className={ D_styles.title }>{item.title}</span>
+                                        <span className={ D_styles.title }>[{item.sel}]{item.title}</span>
                                         <span className={ D_styles.id }>{item.id}</span>
                                         <span className={ D_styles.logTime }>{getToday(item.logTime)}</span>
                                         <span className={ D_styles.hit }>{item.hit}</span>
