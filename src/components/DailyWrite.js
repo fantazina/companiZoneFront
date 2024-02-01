@@ -12,7 +12,7 @@ const DailyWrite = ({onPage, D_styles}) => {
         content : '',
         images : '',
         hit : 0,
-        page: 0
+        page: 1
     })
     
     const [imgList, setImgList] = useState([])
