@@ -76,7 +76,7 @@ const EventList = ({ onPage, onSeq, E_styles, pg, onPg, mainOnPage }) => {
                                 list.map((item, index) => 
                                     <div onClick={ () => onView(item.writeSeq) } className={ E_styles.list }>
                                         <span className={ E_styles.seq }>{item.writeSeq}</span>
-                                        <span className={ E_styles.title }>{item.title}</span>
+                                        <span className={ E_styles.title }>[{item.sel}]{item.title}</span>
                                         <span className={ E_styles.id }>{item.id}</span>
                                         <span className={ E_styles.logTime }>{getToday(item.logTime)}</span>
                                         <span className={ E_styles.hit }>{item.hit}</span>

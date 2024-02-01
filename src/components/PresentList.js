@@ -76,7 +76,7 @@ const PresentList = ({ onPage, onSeq, P_styles, pg, onPg, mainOnPage }) => {
                                 list.map((item, index) => 
                                     <div onClick={ () => onView(item.writeSeq) } className={ P_styles.list }>
                                         <span className={ P_styles.seq }>{item.writeSeq}</span>
-                                        <span className={ P_styles.title }>{item.title}</span>
+                                        <span className={ P_styles.title }>[{item.sel}]{item.title}</span>
                                         <span className={ P_styles.id }>{item.id}</span>
                                         <span className={ P_styles.logTime }>{getToday(item.logTime)}</span>
                                         <span className={ P_styles.hit }>{item.hit}</span>

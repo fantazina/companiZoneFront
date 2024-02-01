@@ -76,7 +76,7 @@ const HealthList = ({ onPage, onSeq, H_styles, pg, onPg, mainOnPage }) => {
                                 list.map((item, index) => 
                                     <div onClick={ () => onView(item.writeSeq) } className={ H_styles.list }>
                                         <span className={ H_styles.seq }>{item.writeSeq}</span>
-                                        <span className={ H_styles.title }>{item.title}</span>
+                                        <span className={ H_styles.title }>[{item.sel}]{item.title}</span>
                                         <span className={ H_styles.id }>{item.id}</span>
                                         <span className={ H_styles.logTime }>{getToday(item.logTime)}</span>
                                         <span className={ H_styles.hit }>{item.hit}</span>

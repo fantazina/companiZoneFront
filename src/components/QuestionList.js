@@ -76,7 +76,7 @@ const QuestionList = ({ onPage, onSeq, Q_styles, pg, onPg, mainOnPage }) => {
                                 list.map((item, index) => 
                                     <div onClick={ () => onView(item.writeSeq) } className={ Q_styles.list }>
                                         <span className={ Q_styles.seq }>{item.writeSeq}</span>
-                                        <span className={ Q_styles.title }>{item.title}</span>
+                                        <span className={ Q_styles.title }>[{item.sel}]{item.title}</span>
                                         <span className={ Q_styles.id }>{item.id}</span>
                                         <span className={ Q_styles.logTime }>{getToday(item.logTime)}</span>
                                         <span className={ Q_styles.hit }>{item.hit}</span>

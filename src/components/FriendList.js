@@ -76,7 +76,7 @@ const FriendList = ({ onPage, onSeq, F_styles, pg, onPg, mainOnPage }) => {
                                 list.map((item, index) => 
                                     <div onClick={ () => onView(item.writeSeq) } className={ F_styles.list }>
                                         <span className={ F_styles.seq }>{item.writeSeq}</span>
-                                        <span className={ F_styles.title }>{item.title}</span>
+                                        <span className={ F_styles.title }>[{item.sel}]{item.title}</span>
                                         <span className={ F_styles.id }>{item.id}</span>
                                         <span className={ F_styles.logTime }>{getToday(item.logTime)}</span>
                                         <span className={ F_styles.hit }>{item.hit}</span>

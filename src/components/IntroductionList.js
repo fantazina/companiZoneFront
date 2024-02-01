@@ -76,7 +76,7 @@ const IntroductionList = ({ onPage, onSeq, I_styles, pg, onPg, mainOnPage }) => 
                                 list.map((item, index) => 
                                     <div onClick={ () => onView(item.writeSeq) } className={ I_styles.list }>
                                         <span className={ I_styles.seq }>{item.writeSeq}</span>
-                                        <span className={ I_styles.title }>{item.title}</span>
+                                        <span className={ I_styles.title }>[{item.sel}]{item.title}</span>
                                         <span className={ I_styles.id }>{item.id}</span>
                                         <span className={ I_styles.logTime }>{getToday(item.logTime)}</span>
                                         <span className={ I_styles.hit }>{item.hit}</span>
